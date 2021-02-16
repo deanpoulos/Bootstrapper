@@ -1,2 +1,4 @@
 .config/bspwm/monitors
+.config/bspwm/startup.sh
 .oh-my-zsh/custom/plugins
+
