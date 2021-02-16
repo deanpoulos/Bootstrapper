@@ -74,10 +74,10 @@ ex ()
 
 cf () 
 {
-    if [ $1 = bspwm ]; then sudoedit ~/.config/bspwm/bspwmrc
-    elif [ $1 = start ]; then sudoedit ~/.config/bspwm/startup.sh
-    elif [ $1 = colours ]; then sudoedit ~/.config/bspwm/colours.sh
-    elif [ $1 = keys ]; then sudoedit ~/.config/sxhkd/sxhkdrc
+    if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
+    elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
+    elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
+    elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
     elif [ $1 = picom ]; then vim ~/.config/picom/picom.conf
     elif [ $1 = zsh ]; then vim ~/.zshrc
     elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
