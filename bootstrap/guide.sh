@@ -27,3 +27,8 @@ sudo xfce4-session-settings
 xfce4-settings-manager      # change default fonts
 nitrogen                    # change wallpaper
 sudo chsh -s /bin/zsh dean  # make zsh default shell
+brave                       # update brave theme/startpage
+xfce4-settings-manager      # remove keyboard shorcuts
+
+# install zsh plugins
+
