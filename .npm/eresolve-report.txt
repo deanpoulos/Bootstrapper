@@ -1,0 +1,72 @@
+# npm resolution error report
+
+2021-02-12T09:45:25.711Z
+
+While resolving: argon-react-native@1.6.0
+Found: @react-navigation/native@5.0.0
+node_modules/@react-navigation/native
+  @react-navigation/native@"5.0.0" from the root project
+
+Could not resolve dependency:
+peer @react-navigation/native@"^5.0.5" from @react-navigation/bottom-tabs@5.11.7
+node_modules/@react-navigation/bottom-tabs
+  @react-navigation/bottom-tabs@"^5.0.6" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "@react-navigation/native",
+    "version": "5.0.0",
+    "whileInstalling": {
+      "name": "argon-react-native",
+      "version": "1.6.0",
+      "path": "/home/dean/downloads/argon-react-native-master"
+    },
+    "location": "node_modules/@react-navigation/native",
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "@react-navigation/native",
+        "spec": "5.0.0",
+        "from": {
+          "location": "/home/dean/downloads/argon-react-native-master"
+        }
+      }
+    ]
+  },
+  "edge": {
+    "type": "peer",
+    "name": "@react-navigation/native",
+    "spec": "^5.0.5",
+    "error": "INVALID",
+    "from": {
+      "name": "@react-navigation/bottom-tabs",
+      "version": "5.11.7",
+      "whileInstalling": {
+        "name": "argon-react-native",
+        "version": "1.6.0",
+        "path": "/home/dean/downloads/argon-react-native-master"
+      },
+      "location": "node_modules/@react-navigation/bottom-tabs",
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "@react-navigation/bottom-tabs",
+          "spec": "^5.0.6",
+          "from": {
+            "location": "/home/dean/downloads/argon-react-native-master"
+          }
+        }
+      ]
+    }
+  },
+  "peerConflict": null,
+  "strictPeerDeps": false,
+  "force": false
+}

@@ -1,0 +1,71 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+1 info using npm@7.5.3
+2 info using node@v15.8.0
+3 timing config:load:defaults Completed in 1ms
+4 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+5 timing config:load:builtin Completed in 1ms
+6 timing config:load:cli Completed in 1ms
+7 timing config:load:env Completed in 0ms
+8 timing config:load:file:/home/dean/downloads/argon-react-native-master/.npmrc Completed in 1ms
+9 timing config:load:project Completed in 1ms
+10 timing config:load:file:/home/dean/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+13 timing config:load:global Completed in 0ms
+14 timing config:load:cafile Completed in 0ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:setUserAgent Completed in 0ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 5ms
+19 verbose npm-session 9139d544a212f8e6
+20 timing npm:load Completed in 8ms
+21 timing arborist:ctor Completed in 1ms
+22 timing arborist:ctor Completed in 0ms
+23 timing idealTree:init Completed in 8ms
+24 timing idealTree:userRequests Completed in 0ms
+25 silly idealTree buildDeps
+26 silly fetch manifest @react-native-community/masked-view@0.1.10
+27 http fetch GET 200 https://registry.npmjs.org/@react-native-community%2fmasked-view 424ms
+28 silly fetch manifest react@16.13.1
+29 http fetch GET 200 https://registry.npmjs.org/react 133ms
+30 silly fetch manifest react-native@https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz
+31 http fetch GET 200 https://codeload.github.com/expo/react-native/tar.gz/sdk-39.0.3 4314ms
+32 silly fetch manifest @react-navigation/bottom-tabs@^5.0.6
+33 http fetch GET 200 https://registry.npmjs.org/@react-navigation%2fbottom-tabs 585ms
+34 silly fetch manifest @react-navigation/native@5.0.0
+35 http fetch GET 200 https://registry.npmjs.org/@react-navigation%2fnative 400ms
+36 silly fetch manifest @react-navigation/native@^5.0.5
+37 timing idealTree Completed in 6070ms
+38 timing command:install Completed in 6078ms
+39 verbose stack Error: unable to resolve dependency tree
+39 verbose stack     at Arborist.[failPeerConflict] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1116:25)
+39 verbose stack     at Arborist.[loadPeerSet] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:1096:34)
+39 verbose stack     at async Arborist.[buildDepStep] (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:825:11)
+39 verbose stack     at async Arborist.buildIdealTree (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/build-ideal-tree.js:209:7)
+39 verbose stack     at async Promise.all (index 1)
+39 verbose stack     at async Arborist.reify (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:127:5)
+39 verbose stack     at async install (/usr/lib/node_modules/npm/lib/install.js:38:3)
+40 verbose cwd /home/dean/downloads/argon-react-native-master
+41 verbose Linux 5.9.16-1-MANJARO
+42 verbose argv "/usr/bin/node" "/usr/bin/npm" "install"
+43 verbose node v15.8.0
+44 verbose npm  v7.5.3
+45 error code ERESOLVE
+46 error ERESOLVE unable to resolve dependency tree
+47 error
+48 error While resolving: [1margon-react-native[22m@[1m1.6.0[22m
+48 error Found: [1m@react-navigation/native[22m@[1m5.0.0[22m[2m[22m
+48 error [2mnode_modules/@react-navigation/native[22m
+48 error   [1m@react-navigation/native[22m@"[1m5.0.0[22m" from the root project
+48 error
+48 error Could not resolve dependency:
+48 error [35mpeer[39m [1m@react-navigation/native[22m@"[1m^5.0.5[22m" from [1m@react-navigation/bottom-tabs[22m@[1m5.11.7[22m[2m[22m
+48 error [2mnode_modules/@react-navigation/bottom-tabs[22m
+48 error   [1m@react-navigation/bottom-tabs[22m@"[1m^5.0.6[22m" from the root project
+48 error
+48 error Fix the upstream dependency conflict, or retry
+48 error this command with --force, or --legacy-peer-deps
+48 error to accept an incorrect (and potentially broken) dependency resolution.
+48 error
+48 error See /home/dean/.npm/eresolve-report.txt for a full report.
+49 verbose exit 1
