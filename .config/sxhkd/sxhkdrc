@@ -1,0 +1,134 @@
+##
+###########################
+# application hotkeys
+###########################
+
+# workspace independent
+
+# terminal emulator
+alt + space
+	kitty
+
+# todo list
+alt + t
+    todoist
+
+# open file manager
+alt + f
+    thunar
+
+# open email-client
+alt + e
+    mutt
+
+# open settings manager
+alt + s
+    xfce4-settings-manager
+
+# open brave
+alt + b
+    brave
+
+# open joplin
+alt + j
+    joplin
+
+# show help
+alt + slash
+    sxhkd-help
+
+# rofi program launcher
+alt + Return
+    rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
+
+# rofi window switcher
+#ctrl + Tab
+#	rofi -show window
+
+# whisker menu
+#{Super_L,Super_R}
+#	xfce4-popup-whiskermenu
+
+# === assigned workspace ===
+
+###########################
+# bspwm hotkeys
+###########################
+
+# make sxhkd reload its configuration files
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# reload bspwmrc configuration file
+#alt + b
+#	pkill docky; /home/xfcebspwm/.config/bspwm/bspwmrc; docky
+
+# close window
+alt {_, + shift} + q
+	bspc node -c
+
+# move focused window to the next workspace and then switch to that workspace
+alt + shift + {Left,Right}
+	id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
+
+# preselect the direction
+alt + ctrl + {Left,Down,Up,Right,space}
+	bspc node -p {west,south,north,east,cancel}
+# move floating window
+#m + {Left,Down,Up,Right}
+#    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# set the node flag to hidden
+#alt + h
+#	bspc node -g hidden
+
+# === function keys ===
+
+# rotate windows
+F1
+	bspc node @/ -R 90
+
+# circulate windows
+F2
+	bspc node @/ -C forward
+
+# flip windows horizontal
+F3
+	bspc node @/ -F horizontal
+
+# flip windows vertical
+F4
+	bspc node @/ -F vertical
+
+# balance windows
+F5
+	bspc node @/ -B
+
+# alternate between the tiled and monocle layout
+F6
+	bspc desktop -l next
+
+# Change window gap
+{F7,F8}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 4 ))
+
+# set the window state
+{F9,F10,F11,F12}
+	bspc node -t {floating,tiled,pseudo_tiled,fullscreen}
+
+# === focus/swap ===
+
+# focus the next/previous node
+alt + {Up,Down}
+	bspc node -f {prev,next}.local.!above
+
+# focus the next/previous desktop
+alt + {Left,Right}
+	bspc node -f {prev,next}.local.!above
+
+alt + {1-3}
+    sh ~/.config/sxhkd/.workspace {1-3}
+
+# focus or send to the given desktop
+ctrl + {_, alt + }{1-6}
+    bspc {desktop -f , node -d} '^{1-6}' 
