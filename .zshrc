@@ -74,7 +74,7 @@ ex ()
 
 cf () 
 {
-    if [ -f $1 ]
+    if [ $1 ]
     then 
         if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
         elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
@@ -84,6 +84,7 @@ cf ()
         elif [ $1 = zsh ]; then vim ~/.zshrc
         elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
+        elif [ $1 = vim ]; then vim ~/.vimrc
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
