@@ -47,6 +47,10 @@ syntax enable
 set background=dark
 color gruvbox
 
+" match terminal/vim colourscheme 
+" https://www.reddit.com/r/vim/comments/6dh58v/synching_the_terminals_background_with_vim/
+autocmd ColorScheme * highlight! Normal ctermbg=NONE guibg=NONE
+
 " document formatting
 set expandtab
 set tabstop=4

@@ -85,6 +85,7 @@ cf ()
         elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
+        elif [ $1 = kitty ]; then vim ~/.config/kitty/kitty.conf
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
