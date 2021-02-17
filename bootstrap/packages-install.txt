@@ -3,4 +3,4 @@ bash-completion python python-pip nitrogen atop calc code dmenu rofi gimp gpick
 grub-theme-manjaro grub-theme-vimix gruvbox-dark-gtk htop mpd neofetch net-tools
 npm noto-fonts powerline-fonts ruby rsync snapd spotify spotifyd spotify-tui
 terminus-font texmaker ttf-iosevka ttf-dejavu vlc yay zsh-autosuggestions
-zsh-syntax-highlighting binutils ntp terminus
+zsh-syntax-highlighting binutils ntp terminus xscreensaver
