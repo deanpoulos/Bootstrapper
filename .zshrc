@@ -74,7 +74,7 @@ ex ()
 
 cf () 
 {
-    if [ $1 ]
+    if [ -f $1 ]
     then 
         if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
         elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
