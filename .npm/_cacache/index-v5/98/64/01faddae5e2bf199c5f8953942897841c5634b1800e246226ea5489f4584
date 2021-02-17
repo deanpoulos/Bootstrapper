@@ -20,3 +20,5 @@ edc719ba2c57ce02d12fbf09b463054729e9a5e3	{"key":"make-fetch-happen:request-cache
 72ff306ba3941be91aa95fcdcab69ee01a89fe59	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/npm/v1/security/advisories/bulk","integrity":null,"time":1613460510173}
 68b67f9a973117a3880a326cddbdf0813e5e68fe	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/npm/v1/security/advisories/bulk","integrity":null,"time":1613477606173}
 85fff0c0fc5e04dc0167880ec64a1833dbaa258c	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/npm/v1/security/advisories/bulk","integrity":null,"time":1613477792992}
+0e8a0d2ec49b168b1b2c1f66bdfc78e2b5570cf0	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/npm/v1/security/advisories/bulk","integrity":null,"time":1613548319409}
+d40be200a9e7d0713ed29aec15f9d275d718ea45	{"key":"make-fetch-happen:request-cache:https://registry.npmjs.org/-/npm/v1/security/advisories/bulk","integrity":null,"time":1613548427523}

@@ -1,0 +1,234 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'npm@7.5.4' ]
+1 info using npm@7.5.3
+2 info using node@v15.8.0
+3 timing config:load:defaults Completed in 1ms
+4 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+5 timing config:load:builtin Completed in 1ms
+6 timing config:load:cli Completed in 1ms
+7 timing config:load:env Completed in 0ms
+8 timing config:load:project Completed in 0ms
+9 timing config:load:file:/home/dean/.npmrc Completed in 0ms
+10 timing config:load:user Completed in 0ms
+11 timing config:load:file:/usr/etc/npmrc Completed in 1ms
+12 timing config:load:global Completed in 1ms
+13 timing config:load:cafile Completed in 0ms
+14 timing config:load:validate Completed in 0ms
+15 timing config:load:setUserAgent Completed in 0ms
+16 timing config:load:setEnvs Completed in 0ms
+17 timing config:load Completed in 4ms
+18 verbose npm-session eb15f39803596b33
+19 timing npm:load Completed in 9ms
+20 timing arborist:ctor Completed in 0ms
+21 timing idealTree:init Completed in 4ms
+22 timing idealTree:userRequests Completed in 2ms
+23 silly idealTree buildDeps
+24 silly fetch manifest npm@7.5.4
+25 http fetch GET 200 https://registry.npmjs.org/npm 1044ms
+26 silly placeDep ROOT npm@7.5.4 OK for:  want: 7.5.4
+27 timing idealTree:#root Completed in 1061ms
+28 timing idealTree:node_modules/npm Completed in 0ms
+29 timing idealTree:buildDeps Completed in 1063ms
+30 timing idealTree:fixDepFlags Completed in 0ms
+31 timing idealTree Completed in 1070ms
+32 timing reify:loadTrees Completed in 1247ms
+33 timing reify:diffTrees Completed in 2ms
+34 silly reify mark retired [
+34 silly reify   '/usr/lib/node_modules/npm',
+34 silly reify   '/usr/bin/npm',
+34 silly reify   '/usr/bin/npx',
+34 silly reify   '/usr/share/man/man1/npm-access.1',
+34 silly reify   '/usr/share/man/man1/npm-adduser.1',
+34 silly reify   '/usr/share/man/man1/npm-audit.1',
+34 silly reify   '/usr/share/man/man1/npm-bin.1',
+34 silly reify   '/usr/share/man/man1/npm-bugs.1',
+34 silly reify   '/usr/share/man/man1/npm-cache.1',
+34 silly reify   '/usr/share/man/man1/npm-ci.1',
+34 silly reify   '/usr/share/man/man1/npm-completion.1',
+34 silly reify   '/usr/share/man/man1/npm-config.1',
+34 silly reify   '/usr/share/man/man1/npm-dedupe.1',
+34 silly reify   '/usr/share/man/man1/npm-deprecate.1',
+34 silly reify   '/usr/share/man/man1/npm-diff.1',
+34 silly reify   '/usr/share/man/man1/npm-dist-tag.1',
+34 silly reify   '/usr/share/man/man1/npm-docs.1',
+34 silly reify   '/usr/share/man/man1/npm-doctor.1',
+34 silly reify   '/usr/share/man/man1/npm-edit.1',
+34 silly reify   '/usr/share/man/man1/npm-exec.1',
+34 silly reify   '/usr/share/man/man1/npm-explain.1',
+34 silly reify   '/usr/share/man/man1/npm-explore.1',
+34 silly reify   '/usr/share/man/man1/npm-fund.1',
+34 silly reify   '/usr/share/man/man1/npm-help-search.1',
+34 silly reify   '/usr/share/man/man1/npm-help.1',
+34 silly reify   '/usr/share/man/man1/npm-hook.1',
+34 silly reify   '/usr/share/man/man1/npm-init.1',
+34 silly reify   '/usr/share/man/man1/npm-install-ci-test.1',
+34 silly reify   '/usr/share/man/man1/npm-install-test.1',
+34 silly reify   '/usr/share/man/man1/npm-install.1',
+34 silly reify   '/usr/share/man/man1/npm-link.1',
+34 silly reify   '/usr/share/man/man1/npm-logout.1',
+34 silly reify   '/usr/share/man/man1/npm-ls.1',
+34 silly reify   '/usr/share/man/man1/npm-org.1',
+34 silly reify   '/usr/share/man/man1/npm-outdated.1',
+34 silly reify   '/usr/share/man/man1/npm-owner.1',
+34 silly reify   '/usr/share/man/man1/npm-pack.1',
+34 silly reify   '/usr/share/man/man1/npm-ping.1',
+34 silly reify   '/usr/share/man/man1/npm-prefix.1',
+34 silly reify   '/usr/share/man/man1/npm-profile.1',
+34 silly reify   '/usr/share/man/man1/npm-prune.1',
+34 silly reify   '/usr/share/man/man1/npm-publish.1',
+34 silly reify   '/usr/share/man/man1/npm-rebuild.1',
+34 silly reify   '/usr/share/man/man1/npm-repo.1',
+34 silly reify   '/usr/share/man/man1/npm-restart.1',
+34 silly reify   '/usr/share/man/man1/npm-root.1',
+34 silly reify   '/usr/share/man/man1/npm-run-script.1',
+34 silly reify   '/usr/share/man/man1/npm-search.1',
+34 silly reify   '/usr/share/man/man1/npm-set-script.1',
+34 silly reify   '/usr/share/man/man1/npm-shrinkwrap.1',
+34 silly reify   '/usr/share/man/man1/npm-star.1',
+34 silly reify   '/usr/share/man/man1/npm-stars.1',
+34 silly reify   '/usr/share/man/man1/npm-start.1',
+34 silly reify   '/usr/share/man/man1/npm-stop.1',
+34 silly reify   '/usr/share/man/man1/npm-team.1',
+34 silly reify   '/usr/share/man/man1/npm-test.1',
+34 silly reify   '/usr/share/man/man1/npm-token.1',
+34 silly reify   '/usr/share/man/man1/npm-uninstall.1',
+34 silly reify   '/usr/share/man/man1/npm-unpublish.1',
+34 silly reify   '/usr/share/man/man1/npm-unstar.1',
+34 silly reify   '/usr/share/man/man1/npm-update.1',
+34 silly reify   '/usr/share/man/man1/npm-version.1',
+34 silly reify   '/usr/share/man/man1/npm-view.1',
+34 silly reify   '/usr/share/man/man1/npm-whoami.1',
+34 silly reify   '/usr/share/man/man1/npm.1',
+34 silly reify   '/usr/share/man/man1/npx.1',
+34 silly reify   '/usr/share/man/man5/folders.5',
+34 silly reify   '/usr/share/man/man5/install.5',
+34 silly reify   '/usr/share/man/man5/npm-shrinkwrap-json.5',
+34 silly reify   '/usr/share/man/man5/npmrc.5',
+34 silly reify   '/usr/share/man/man5/package-json.5',
+34 silly reify   '/usr/share/man/man5/package-lock-json.5',
+34 silly reify   '/usr/share/man/man5/package-locks.5',
+34 silly reify   '/usr/share/man/man5/shrinkwrap-json.5',
+34 silly reify   '/usr/share/man/man7/config.7',
+34 silly reify   '/usr/share/man/man7/developers.7',
+34 silly reify   '/usr/share/man/man7/disputes.7',
+34 silly reify   '/usr/share/man/man7/orgs.7',
+34 silly reify   '/usr/share/man/man7/registry.7',
+34 silly reify   '/usr/share/man/man7/removal.7',
+34 silly reify   '/usr/share/man/man7/scope.7',
+34 silly reify   '/usr/share/man/man7/scripts.7',
+34 silly reify   '/usr/share/man/man7/semver.7',
+34 silly reify   '/usr/share/man/man7/workspaces.7'
+34 silly reify ]
+35 silly reify moves {
+35 silly reify   '/usr/lib/node_modules/npm': '/usr/lib/node_modules/.npm-qUIFSsiV',
+35 silly reify   '/usr/bin/npm': '/usr/bin/.npm-CxSgn0z2',
+35 silly reify   '/usr/bin/npx': '/usr/bin/.npx-akSQqeWh',
+35 silly reify   '/usr/share/man/man1/npm-access.1': '/usr/share/man/man1/.npm-access.1-4g4eJM3w',
+35 silly reify   '/usr/share/man/man1/npm-adduser.1': '/usr/share/man/man1/.npm-adduser.1-IwuQ7HCj',
+35 silly reify   '/usr/share/man/man1/npm-audit.1': '/usr/share/man/man1/.npm-audit.1-bLNTzOqZ',
+35 silly reify   '/usr/share/man/man1/npm-bin.1': '/usr/share/man/man1/.npm-bin.1-bn3aBtSB',
+35 silly reify   '/usr/share/man/man1/npm-bugs.1': '/usr/share/man/man1/.npm-bugs.1-NDA5tQ8D',
+35 silly reify   '/usr/share/man/man1/npm-cache.1': '/usr/share/man/man1/.npm-cache.1-30TgnDUy',
+35 silly reify   '/usr/share/man/man1/npm-ci.1': '/usr/share/man/man1/.npm-ci.1-dFNEiIqM',
+35 silly reify   '/usr/share/man/man1/npm-completion.1': '/usr/share/man/man1/.npm-completion.1-IVtjAJWj',
+35 silly reify   '/usr/share/man/man1/npm-config.1': '/usr/share/man/man1/.npm-config.1-tq1HUQCV',
+35 silly reify   '/usr/share/man/man1/npm-dedupe.1': '/usr/share/man/man1/.npm-dedupe.1-Gltx9iV9',
+35 silly reify   '/usr/share/man/man1/npm-deprecate.1': '/usr/share/man/man1/.npm-deprecate.1-5L9Mx5il',
+35 silly reify   '/usr/share/man/man1/npm-diff.1': '/usr/share/man/man1/.npm-diff.1-YtcrFiWh',
+35 silly reify   '/usr/share/man/man1/npm-dist-tag.1': '/usr/share/man/man1/.npm-dist-tag.1-NXVjmy03',
+35 silly reify   '/usr/share/man/man1/npm-docs.1': '/usr/share/man/man1/.npm-docs.1-pLVbUigy',
+35 silly reify   '/usr/share/man/man1/npm-doctor.1': '/usr/share/man/man1/.npm-doctor.1-lYDTp6II',
+35 silly reify   '/usr/share/man/man1/npm-edit.1': '/usr/share/man/man1/.npm-edit.1-cSQRMizB',
+35 silly reify   '/usr/share/man/man1/npm-exec.1': '/usr/share/man/man1/.npm-exec.1-6kgNldr1',
+35 silly reify   '/usr/share/man/man1/npm-explain.1': '/usr/share/man/man1/.npm-explain.1-7oE00QEm',
+35 silly reify   '/usr/share/man/man1/npm-explore.1': '/usr/share/man/man1/.npm-explore.1-gq4RuDzk',
+35 silly reify   '/usr/share/man/man1/npm-fund.1': '/usr/share/man/man1/.npm-fund.1-WVLQ5tbZ',
+35 silly reify   '/usr/share/man/man1/npm-help-search.1': '/usr/share/man/man1/.npm-help-search.1-aT5UXTCG',
+35 silly reify   '/usr/share/man/man1/npm-help.1': '/usr/share/man/man1/.npm-help.1-3OTP77S6',
+35 silly reify   '/usr/share/man/man1/npm-hook.1': '/usr/share/man/man1/.npm-hook.1-r59O8Hah',
+35 silly reify   '/usr/share/man/man1/npm-init.1': '/usr/share/man/man1/.npm-init.1-KaXOI9L9',
+35 silly reify   '/usr/share/man/man1/npm-install-ci-test.1': '/usr/share/man/man1/.npm-install-ci-test.1-rM5BI6uU',
+35 silly reify   '/usr/share/man/man1/npm-install-test.1': '/usr/share/man/man1/.npm-install-test.1-6K4bsR6i',
+35 silly reify   '/usr/share/man/man1/npm-install.1': '/usr/share/man/man1/.npm-install.1-EjbJejtu',
+35 silly reify   '/usr/share/man/man1/npm-link.1': '/usr/share/man/man1/.npm-link.1-qLQguUOG',
+35 silly reify   '/usr/share/man/man1/npm-logout.1': '/usr/share/man/man1/.npm-logout.1-ULEcWMNo',
+35 silly reify   '/usr/share/man/man1/npm-ls.1': '/usr/share/man/man1/.npm-ls.1-ze9hGHre',
+35 silly reify   '/usr/share/man/man1/npm-org.1': '/usr/share/man/man1/.npm-org.1-8qKYpylx',
+35 silly reify   '/usr/share/man/man1/npm-outdated.1': '/usr/share/man/man1/.npm-outdated.1-NdoCncuv',
+35 silly reify   '/usr/share/man/man1/npm-owner.1': '/usr/share/man/man1/.npm-owner.1-A8goBDTc',
+35 silly reify   '/usr/share/man/man1/npm-pack.1': '/usr/share/man/man1/.npm-pack.1-xfIu58cQ',
+35 silly reify   '/usr/share/man/man1/npm-ping.1': '/usr/share/man/man1/.npm-ping.1-cILHh0tG',
+35 silly reify   '/usr/share/man/man1/npm-prefix.1': '/usr/share/man/man1/.npm-prefix.1-7JOUwgIk',
+35 silly reify   '/usr/share/man/man1/npm-profile.1': '/usr/share/man/man1/.npm-profile.1-1xjTzPXF',
+35 silly reify   '/usr/share/man/man1/npm-prune.1': '/usr/share/man/man1/.npm-prune.1-TMvrGQOE',
+35 silly reify   '/usr/share/man/man1/npm-publish.1': '/usr/share/man/man1/.npm-publish.1-Pzj9n4X6',
+35 silly reify   '/usr/share/man/man1/npm-rebuild.1': '/usr/share/man/man1/.npm-rebuild.1-V4E7iFRj',
+35 silly reify   '/usr/share/man/man1/npm-repo.1': '/usr/share/man/man1/.npm-repo.1-4RvHKnCw',
+35 silly reify   '/usr/share/man/man1/npm-restart.1': '/usr/share/man/man1/.npm-restart.1-IZ0gHolC',
+35 silly reify   '/usr/share/man/man1/npm-root.1': '/usr/share/man/man1/.npm-root.1-kWMASVRR',
+35 silly reify   '/usr/share/man/man1/npm-run-script.1': '/usr/share/man/man1/.npm-run-script.1-CyDqxJ2N',
+35 silly reify   '/usr/share/man/man1/npm-search.1': '/usr/share/man/man1/.npm-search.1-NtAEZXai',
+35 silly reify   '/usr/share/man/man1/npm-set-script.1': '/usr/share/man/man1/.npm-set-script.1-ZRpbvnQ1',
+35 silly reify   '/usr/share/man/man1/npm-shrinkwrap.1': '/usr/share/man/man1/.npm-shrinkwrap.1-v49L9FDc',
+35 silly reify   '/usr/share/man/man1/npm-star.1': '/usr/share/man/man1/.npm-star.1-ixGH7OoH',
+35 silly reify   '/usr/share/man/man1/npm-stars.1': '/usr/share/man/man1/.npm-stars.1-pvF7klsw',
+35 silly reify   '/usr/share/man/man1/npm-start.1': '/usr/share/man/man1/.npm-start.1-9Bi8rN8w',
+35 silly reify   '/usr/share/man/man1/npm-stop.1': '/usr/share/man/man1/.npm-stop.1-wGFFzOjO',
+35 silly reify   '/usr/share/man/man1/npm-team.1': '/usr/share/man/man1/.npm-team.1-xbfOcfTZ',
+35 silly reify   '/usr/share/man/man1/npm-test.1': '/usr/share/man/man1/.npm-test.1-dITB91H4',
+35 silly reify   '/usr/share/man/man1/npm-token.1': '/usr/share/man/man1/.npm-token.1-lwaHTn8z',
+35 silly reify   '/usr/share/man/man1/npm-uninstall.1': '/usr/share/man/man1/.npm-uninstall.1-zVdNEZx7',
+35 silly reify   '/usr/share/man/man1/npm-unpublish.1': '/usr/share/man/man1/.npm-unpublish.1-mii7Y0tg',
+35 silly reify   '/usr/share/man/man1/npm-unstar.1': '/usr/share/man/man1/.npm-unstar.1-nReObPZw',
+35 silly reify   '/usr/share/man/man1/npm-update.1': '/usr/share/man/man1/.npm-update.1-0XivRid3',
+35 silly reify   '/usr/share/man/man1/npm-version.1': '/usr/share/man/man1/.npm-version.1-bXewos2K',
+35 silly reify   '/usr/share/man/man1/npm-view.1': '/usr/share/man/man1/.npm-view.1-JuglALoF',
+35 silly reify   '/usr/share/man/man1/npm-whoami.1': '/usr/share/man/man1/.npm-whoami.1-moUWKTmJ',
+35 silly reify   '/usr/share/man/man1/npm.1': '/usr/share/man/man1/.npm.1-WKFQ6lRh',
+35 silly reify   '/usr/share/man/man1/npx.1': '/usr/share/man/man1/.npx.1-spiFNj3T',
+35 silly reify   '/usr/share/man/man5/folders.5': '/usr/share/man/man5/.folders.5-9qsqTQjB',
+35 silly reify   '/usr/share/man/man5/install.5': '/usr/share/man/man5/.install.5-9W6CtleH',
+35 silly reify   '/usr/share/man/man5/npm-shrinkwrap-json.5': '/usr/share/man/man5/.npm-shrinkwrap-json.5-t1F86gLz',
+35 silly reify   '/usr/share/man/man5/npmrc.5': '/usr/share/man/man5/.npmrc.5-ARnw4Uzg',
+35 silly reify   '/usr/share/man/man5/package-json.5': '/usr/share/man/man5/.package-json.5-W6OlwGST',
+35 silly reify   '/usr/share/man/man5/package-lock-json.5': '/usr/share/man/man5/.package-lock-json.5-xretArdh',
+35 silly reify   '/usr/share/man/man5/package-locks.5': '/usr/share/man/man5/.package-locks.5-mdmkiAQ0',
+35 silly reify   '/usr/share/man/man5/shrinkwrap-json.5': '/usr/share/man/man5/.shrinkwrap-json.5-0N0hnUHs',
+35 silly reify   '/usr/share/man/man7/config.7': '/usr/share/man/man7/.config.7-BlOjQKnb',
+35 silly reify   '/usr/share/man/man7/developers.7': '/usr/share/man/man7/.developers.7-EvkLIpj2',
+35 silly reify   '/usr/share/man/man7/disputes.7': '/usr/share/man/man7/.disputes.7-JQR6JYoQ',
+35 silly reify   '/usr/share/man/man7/orgs.7': '/usr/share/man/man7/.orgs.7-jpcAcjJ1',
+35 silly reify   '/usr/share/man/man7/registry.7': '/usr/share/man/man7/.registry.7-LgvzYLFj',
+35 silly reify   '/usr/share/man/man7/removal.7': '/usr/share/man/man7/.removal.7-hD69XR80',
+35 silly reify   '/usr/share/man/man7/scope.7': '/usr/share/man/man7/.scope.7-8R5pwsaL',
+35 silly reify   '/usr/share/man/man7/scripts.7': '/usr/share/man/man7/.scripts.7-iZO5R7Fe',
+35 silly reify   '/usr/share/man/man7/semver.7': '/usr/share/man/man7/.semver.7-FpDNbi81',
+35 silly reify   '/usr/share/man/man7/workspaces.7': '/usr/share/man/man7/.workspaces.7-EarIgxF7'
+35 silly reify }
+36 timing reify:rollback:retireShallow Completed in 11ms
+37 timing command:install Completed in 1270ms
+38 verbose stack Error: EACCES: permission denied, rename '/usr/lib/node_modules/npm' -> '/usr/lib/node_modules/.npm-qUIFSsiV'
+39 verbose cwd /home/dean
+40 verbose Linux 5.9.16-1-MANJARO
+41 verbose argv "/usr/bin/node" "/usr/bin/npm" "install" "-g" "npm@7.5.4"
+42 verbose node v15.8.0
+43 verbose npm  v7.5.3
+44 error code EACCES
+45 error syscall rename
+46 error path /usr/lib/node_modules/npm
+47 error dest /usr/lib/node_modules/.npm-qUIFSsiV
+48 error errno -13
+49 error Error: EACCES: permission denied, rename '/usr/lib/node_modules/npm' -> '/usr/lib/node_modules/.npm-qUIFSsiV'
+49 error  [Error: EACCES: permission denied, rename '/usr/lib/node_modules/npm' -> '/usr/lib/node_modules/.npm-qUIFSsiV'] {
+49 error   errno: -13,
+49 error   code: 'EACCES',
+49 error   syscall: 'rename',
+49 error   path: '/usr/lib/node_modules/npm',
+49 error   dest: '/usr/lib/node_modules/.npm-qUIFSsiV'
+49 error }
+50 error The operation was rejected by your operating system.
+50 error It is likely you do not have the permissions to access this file as the current user
+50 error
+50 error If you believe this might be a permissions issue, please double-check the
+50 error permissions of the file and its containing directories, or try running
+50 error the command again as root/Administrator.
+51 verbose exit -13

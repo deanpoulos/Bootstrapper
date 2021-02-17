@@ -1,0 +1,36 @@
+0 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'audit', 'fix' ]
+1 info using npm@7.5.4
+2 info using node@v15.8.0
+3 timing config:load:defaults Completed in 0ms
+4 timing config:load:file:/usr/lib/node_modules/npm/npmrc Completed in 1ms
+5 timing config:load:builtin Completed in 1ms
+6 timing config:load:cli Completed in 1ms
+7 timing config:load:env Completed in 0ms
+8 timing config:load:project Completed in 0ms
+9 timing config:load:file:/home/dean/.npmrc Completed in 0ms
+10 timing config:load:user Completed in 1ms
+11 timing config:load:file:/usr/etc/npmrc Completed in 0ms
+12 timing config:load:global Completed in 0ms
+13 timing config:load:cafile Completed in 0ms
+14 timing config:load:validate Completed in 0ms
+15 timing config:load:setUserAgent Completed in 0ms
+16 timing config:load:setEnvs Completed in 1ms
+17 timing config:load Completed in 4ms
+18 verbose npm-session 9b69e971f1a50360
+19 timing npm:load Completed in 8ms
+20 timing arborist:ctor Completed in 0ms
+21 timing command:audit Completed in 2ms
+22 verbose stack Error: loadVirtual requires existing shrinkwrap file
+22 verbose stack     at Arborist.loadVirtual (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/load-virtual.js:57:18)
+22 verbose stack     at async Arborist.audit (/usr/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/audit.js:23:18)
+22 verbose stack     at async audit (/usr/lib/node_modules/npm/lib/audit.js:15:3)
+23 verbose cwd /home/dean
+24 verbose Linux 5.9.16-1-MANJARO
+25 verbose argv "/usr/bin/node" "/usr/bin/npm" "audit" "fix"
+26 verbose node v15.8.0
+27 verbose npm  v7.5.4
+28 error code ENOLOCK
+29 error audit This command requires an existing lockfile.
+30 error audit Try creating one first with: npm i --package-lock-only
+31 error audit Original error: loadVirtual requires existing shrinkwrap file
+32 verbose exit 1
