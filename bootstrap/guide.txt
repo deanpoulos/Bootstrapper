@@ -22,10 +22,10 @@ sudo pacman -Sy $( cat configs/bootstrap-applications )
 sudo xfce4-session-settings
 # -> change restart style of xfwm4, xfce4-panel, xfdesktop to Never
 # -> Save Session
-# -> add Application Autostrat rule for bspwm
+# -> add Application Autostart rule for bspwm
 
+# change default fonts
+xfce4-settings-manager
 
-
-
-
-
+# change wallpaper
+nitrogen
