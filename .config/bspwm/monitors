@@ -1,0 +1,2 @@
+bspc monitor DP-0 -d II IV VI
+bspc monitor HDMI-0 -d I III IV
