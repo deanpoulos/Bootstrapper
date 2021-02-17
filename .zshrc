@@ -74,30 +74,40 @@ ex ()
 
 cf () 
 {
-    if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
-    elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
-    elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
-    elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
-    elif [ $1 = picom ]; then vim ~/.config/picom/picom.conf
-    elif [ $1 = zsh ]; then vim ~/.zshrc
-    elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
-    elif [ $1 = zshenv ]; then vim ~/.zshenv
-    else echo "Error: No dotfile configured for argument '$1'."
+    if [ $1 ]
+    then 
+        if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
+        elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
+        elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
+        elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
+        elif [ $1 = picom ]; then vim ~/.config/picom/picom.conf
+        elif [ $1 = zsh ]; then vim ~/.zshrc
+        elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
+        elif [ $1 = zshenv ]; then vim ~/.zshenv
+        else echo "Syntax error: No dotfile configured for argument '$1'."
+        fi
+    else 
+        echo "Not enough arguments provided.\nSyntax: cf <shortcut>"
     fi
 }
 
-fresh ()
-    if [ $1 = bspwm ]; then ~/.config/bspwm/bspwmrc
-    elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
-    elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
-    elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-    elif [ $1 = picom ]; then killall picom || sleep 1 && picom &
-    elif [ $1 = zsh ]; then zsh
-    else echo "Error: No refresh sequence configured for argument '$1'."
-    fi
+fresh () 
 {
-
+    if [ $1 ] 
+    then
+        if [ $1 = bspwm ]; then ~/.config/bspwm/bspwmrc
+        elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
+        elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
+        elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
+        elif [ $1 = picom ]; then killall picom || sleep 1 && picom &
+        elif [ $1 = zsh ]; then zsh
+        else echo "Syntax error: No refresh sequence configured for argument '$1'."
+        fi
+    else
+        echo "Not enough arguments provided.\nSyntax: fresh <shortcut>"
+    fi
 }
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 DISABLE_UPDATE_PROMPT="true"

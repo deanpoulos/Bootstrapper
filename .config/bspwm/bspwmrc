@@ -25,5 +25,6 @@ bspc config pointer_action1 move
 
 # application-specific rules
 bspc rule -a xfce4-settings-manager state=floating follow=on
+bspc rule -a Xfce4-settings-manager state=floating follow=on
 bspc rule -a thunar state=floating follow=on
 bspc rule -a spotify state=floating hidden=on
