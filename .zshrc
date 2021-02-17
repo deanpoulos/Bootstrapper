@@ -91,7 +91,7 @@ fresh ()
     elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
     elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
     elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-    elif [ $1 = picom ]; then killall picom || picom &
+    elif [ $1 = picom ]; then killall picom || sleep 1 && picom &
     elif [ $1 = zsh ]; then zsh
     else echo "Error: No refresh sequence configured for argument '$1'."
     fi
