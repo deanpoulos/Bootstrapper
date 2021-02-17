@@ -1,6 +1,6 @@
 # Print "motd"
 clear
-neofetch
+DISPLAY="" neofetch --disable gpu
 
 # Add ruby to path
 export PATH=/home/dean/.local/share/gem/ruby/2.7.0/bin:$PATH
@@ -81,6 +81,7 @@ cf ()
     elif [ $1 = picom ]; then vim ~/.config/picom/picom.conf
     elif [ $1 = zsh ]; then vim ~/.zshrc
     elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
+    elif [ $1 = zshenv ]; then vim ~/.zshenv
     else echo "Error: No dotfile configured for argument '$1'."
     fi
 }
