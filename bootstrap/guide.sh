@@ -37,3 +37,6 @@ xfce4-settings-manager      # remove keyboard shorcuts
 
 # link sxhkd-help binary
 cd /usr/local/bin && sudo ln -s ~/configs/bin/sxhkd-help
+
+# synchronise time with network time
+sudo ntpd -qg
