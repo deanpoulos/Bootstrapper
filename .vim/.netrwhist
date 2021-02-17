@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/dean/configs'
 let g:netrw_dirhist_5='/home/dean/.config/polybar/blocks'
 let g:netrw_dirhist_4='/home/dean/projects/tarot'
 let g:netrw_dirhist_3='/home/dean/.config/polybar/blocks'
