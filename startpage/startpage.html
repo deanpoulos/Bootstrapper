@@ -1,0 +1,118 @@
+<!--Startpage by Tayumpee-->
+<!--facebook.com/yourwaterlord-->
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>お帰りなさい, ANON</title>
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="icon" type="image/svg+xml" href="favicon.svg">
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				  //URL of the RSS feed
+				  $(".marquee").toggleClass("microsoft");
+				  var feed_url = 'http://www.gamespot.com/feeds/news/';
+				$.ajax({
+				  url      : 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(feed_url),
+				  dataType : 'json',
+				  success  : function (data) {
+					if (data.responseData.feed && data.responseData.feed.entries) {
+					  $.each(data.responseData.feed.entries, function (i, e) {
+						$("#news1").append('<a  class="mlink" href="' + e.link + '">' + e.title + '.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+						//document.getElementById("news1").setAttribute("data-marquee", '<a  class="mlink" href="' + e.link + '">' + e.title + '.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+						//console.log('<span class="marquee"><a  class="mlink" href="' + e.link + '">' + e.title + '.</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>');
+					  });
+					}
+				  }
+				});
+			});
+			
+			function show( show1 ) {
+			  document.getElementById(show1).style.display="block";
+			}
+			function hide( hide1 ) {
+			  document.getElementById(hide1).style.display="none";
+			}
+			function tog( tog1 ) {
+			  document.getElementById(tog1).style.backgroundColor="#777777";
+			}
+			function toh( toh1 ) {
+			  document.getElementById(toh1).style.backgroundColor="#ffffff";
+			}
+		</script>
+	</head>
+	<body>
+		<div class="maincontainer">
+			<div class="bottomcontainer">
+				<div class="button" id="btn1" onclick = "show('main1');hide('main2');tog('btn1');toh('btn2');"></div>
+				<div class="button" id="btn2" onclick = "show('main2');hide('main1');tog('btn2');toh('btn1');"></div>
+
+				<div class="searchbar">
+					<form name="form1" action="http://google.com/search"  method="get" >
+						<input type="text" autocomplete="off" placeholder="google search..." name="q" class="searchinput"></input>
+					</form>
+				</div>
+			</div>
+			<div class="time" id="time">
+				<script>
+					//document.getElementById("main").innerHTML = Date();
+					function updateClock() {
+						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+						var m = new Date();
+						var dateString =
+						  (days[ m.getDay() ]) + " " +
+						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
+						  ("0" + m.getDate()).slice(-2) + "/" +
+						  m.getFullYear() +" "+
+						  ("0" + m.getHours()).slice(-2) + ":" +
+						  ("0" + m.getMinutes()).slice(-2) + ":" +
+						  ("0" + m.getSeconds()).slice(-2);
+						
+						// set the content of the element with the ID time to the formatted string
+						document.getElementById('time').innerHTML = dateString;
+
+						// call this function again in 1000ms
+						setTimeout(updateClock, 1000);
+					}
+					updateClock(); // initial call
+				</script>
+			</div>
+			<div class="main" id="main1">
+				<div class="sidebar" style="background-image: url(img/m3.gif);"></div>
+				<div class="welcome">お帰りなさい</div>
+				<div class="bookmarkscontainer">
+					<ul>
+						<li><a href="http://4chan.org/pol/" class="clink">/pol/</a>
+						<li><a href="http://4chan.org/lit/" class="clink">/lit/</a>
+						<li><a href="http://4chan.org/w/" class="clink">/w/</a>
+						<li><a href="http://4chan.org/g/" class="clink">/g/</a>
+					</ul>
+					<ul>
+						<li><a href="http://github.com" class="clink" >github</a>
+						<li><a href="http://messenger.com" class="clink" >messenger</a>
+						<li><a href="http://linkedin.com" class="clink" >linkedin</a>
+						<li><a href="http://youtube.com" class="clink" >youtube</a>
+						<li><a href="http://facebook.com" class="clink" >facebook</a>
+					</ul>
+					<ul>
+						<li><a href="https://my.sshrm.unsw.edu.au/" class="clink" >unsw</a>
+						<li><a href="https://moodle.telt.unsw.edu.au/" class="clink" >moodle</a>
+						<li><a href="https://https://webcms3.cse.unsw.edu.au/" class="clink" >webcms3</a>
+						<li><a href="https://www.handbook.unsw.edu.au/" class="clink" >handbook</a>
+					</ul>
+					<ul>
+						<li><a href="http://amazon.com.au" class="clink" >amazon</a>
+						<li><a href="http://ebay.com.au" class="clink" >ebay</a>
+					</ul>
+				</div>
+			</div>
+			<div class="main" id="main2" style="display:none">
+				<div class="sidebar" style="background-image: url(img/m2.gif);"></div>
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/1I3YhzxZUKc" frameborder="0" allowfullscreen></iframe>			
+			</div>
+		</div>
+	</body>
+</html>
