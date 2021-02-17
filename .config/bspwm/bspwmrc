@@ -8,8 +8,7 @@ picom &
 ~/.config/bspwm/startup.sh &
 
 # monitor configuration
-bspc monitor DP-0 -d II IV VI
-bspc monitor HDMI-0 -d I III IV
+source ~/.config/bspwm/monitors
 
 # visual configuration
 bspc config border_width 3
