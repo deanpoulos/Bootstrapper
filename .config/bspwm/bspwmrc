@@ -5,7 +5,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &  # start x-hotkey daemon
 nitrogen --restore
 picom &
 ~/.config/polybar/blocks/launch.sh
-~/.config/bspwm/startup.sh &
+# ~/.config/bspwm/startup.sh &
 
 # monitor configuration
 source ~/.config/bspwm/monitors
@@ -24,7 +24,6 @@ bspc config pointer_action3 resize_corner
 bspc config pointer_action1 move
 
 # application-specific rules
-bspc rule -a xfce4-settings-manager state=floating follow=on
 bspc rule -a Xfce4-settings-manager state=floating follow=on
-bspc rule -a thunar state=floating follow=on
-bspc rule -a spotify state=floating hidden=on
+bspc rule -a Thunar state=floating follow=on
+bspc rule -a Spotify state=floating hidden=on
