@@ -34,3 +34,6 @@ xfce4-settings-manager      # remove keyboard shorcuts
 # install polybar-themes fonts
 
 # edit lightdm-greeter-settings
+
+# link sxhkd-help binary
+cd /usr/local/bin && sudo ln -s ~/configs/bin/sxhkd-help
