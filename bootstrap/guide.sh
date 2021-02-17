@@ -31,4 +31,6 @@ brave                       # update brave theme/startpage
 xfce4-settings-manager      # remove keyboard shorcuts
 
 # install zsh plugins
+# install polybar-themes fonts
 
+# edit lightdm-greeter-settings
