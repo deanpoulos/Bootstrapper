@@ -1,4 +1,8 @@
 .config/bspwm/monitors
 .config/bspwm/startup.sh
+
 .oh-my-zsh/custom/plugins
+.oh-my-zsh/cache
+.vim/bundle
+
 
