@@ -86,6 +86,7 @@ cf ()
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
         elif [ $1 = kitty ]; then vim ~/.config/kitty/kitty.conf
+        elif [ $1 = bar ]; then vim ~/.config/polybar/launch.sh
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -103,6 +104,7 @@ fresh ()
         elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
         elif [ $1 = picom ]; then killall picom || sleep 1 && picom &
         elif [ $1 = zsh ]; then zsh
+        elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
         fi
     else
