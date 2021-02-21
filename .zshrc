@@ -8,7 +8,8 @@ export ZSH="/home/dean/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life"
+#ZSH_THEME="half-life"
+ZSH_THEME="trapd00r"
 ZSH_THEME_RANDOM_CANDIDATES=(
     "agnoster"
 	"half-life"
@@ -43,6 +44,7 @@ alias logout='kill -9 -1'
 alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
 alias svim='sudo -E vim'
+alias prolog='swipl'
 
 #
 # # ex - archive extractor
@@ -100,7 +102,7 @@ fresh ()
         elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-        elif [ $1 = comp ]; then pkill picom || sleep 1 && nohup picom --experimental-backends --backend glx --xrender-sync-fence & 
+        elif [ $1 = comp ]; then pkill picom || sleep 1 && nohup picom --experimental-backends --backend glx --xrender-sync-fence >> /dev/null & 
         elif [ $1 = zsh ]; then zsh
         elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
