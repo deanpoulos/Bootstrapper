@@ -9,3 +9,5 @@
 .vim/bundle
 
 .config/mutt/cache
+
+.config/polybar/panels/launch.sh
