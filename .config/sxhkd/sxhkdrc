@@ -37,9 +37,16 @@ alt + j
 alt + slash
     sxhkd-help
 
+alt + e
+    kitty neomutt
+
 # rofi program launcher
 alt + Return
     rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
+
+# take screenshot
+super + shift + s
+    xfce4-screenshooter -c -r
 
 # rofi window switcher
 #ctrl + Tab
@@ -130,5 +137,5 @@ alt + {1-3}
     sh ~/.config/sxhkd/.workspace {1-3}
 
 # focus or send to the given desktop
-shift + {_, alt + }{1-6}
+ctrl + {_, alt + }{1-6}
     bspc {desktop -f , node -d} '^{1-6}' 

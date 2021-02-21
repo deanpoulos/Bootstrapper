@@ -1,7 +1,3 @@
-# Print "motd"
-clear
-DISPLAY="" neofetch --disable gpu
-
 # Add ruby to path
 export PATH=/home/dean/.local/share/gem/ruby/2.7.0/bin:$PATH
 
@@ -42,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add sudo !! feature
 alias ii='$(fc -ln -1)'
+alias fetch='clear; neofetch --disable gpu'
 alias logout='kill -9 -1'
 alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
@@ -76,17 +73,18 @@ cf ()
 {
     if [ $1 ]
     then 
-        if [ $1 = bspwm ]; then vim ~/.config/bspwm/bspwmrc
+        if [ $1 = wm ]; then vim ~/.config/bspwm/bspwmrc
         elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
-        elif [ $1 = picom ]; then vim ~/.config/picom/picom.conf
+        elif [ $1 = comp ]; then vim ~/.config/picom/picom.conf
         elif [ $1 = zsh ]; then vim ~/.zshrc
         elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
         elif [ $1 = kitty ]; then vim ~/.config/kitty/kitty.conf
         elif [ $1 = bar ]; then vim ~/.config/polybar/launch.sh
+        elif [ $1 = mime ]; then vim ~/.config/mimeapps.list
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -98,11 +96,11 @@ fresh ()
 {
     if [ $1 ] 
     then
-        if [ $1 = bspwm ]; then ~/.config/bspwm/bspwmrc
+        if [ $1 = wm ]; then ~/.config/bspwm/bspwmrc
         elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-        elif [ $1 = picom ]; then killall picom || sleep 1 && picom &
+        elif [ $1 = comp ]; then killall picom || sleep 1 && picom &
         elif [ $1 = zsh ]; then zsh
         elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
@@ -115,3 +113,7 @@ fresh ()
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 DISABLE_UPDATE_PROMPT="true"
+
+# Print "motd"
+
+DISPLAY="" fetch

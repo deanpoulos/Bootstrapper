@@ -40,3 +40,10 @@ cd /usr/local/bin && sudo ln -s ~/configs/bin/sxhkd-help
 
 # synchronise time with network time
 sudo ntpd -qg
+
+# synchronise
+pacaur -S onedrive-git  # github.com/skillion/onedrive
+onedrive
+
+# set default cursor
+xsetroot -cursor_name left_ptr

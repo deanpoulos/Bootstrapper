@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/dean/projects/git-hook-docs/repo/.git/hooks'
 let g:netrw_dirhist_6='/home/dean/configs'
 let g:netrw_dirhist_5='/home/dean/.config/polybar/blocks'
 let g:netrw_dirhist_4='/home/dean/projects/tarot'
