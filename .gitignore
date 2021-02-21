@@ -1,3 +1,6 @@
+# If you want to ignore a file that is already being tracked, run
+# $ git rm --cached <file>
+
 .config/bspwm/monitors
 .config/bspwm/startup.sh
 
