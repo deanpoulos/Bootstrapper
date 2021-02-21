@@ -1,0 +1,10 @@
+configuration {
+	font: "Inconsolata Regular 12";
+	show-icons: true;
+	sidebar-mode: true;
+	separator-style: "solid";
+	color-normal: "#2E3440, #D8DEE9, #2E3440, #D8DEE9, #2E3440";
+	color-urgent: "#2E3440, #5E81AC, #2E3440, #5E81AC, #2E3440";
+	color-active: "#2E3440, #88C0D0, #2E3440, #88C0D0, #2E3440";
+	color-window: "#2E3440, #88C0D0, #88C0D0";
+}

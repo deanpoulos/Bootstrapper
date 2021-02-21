@@ -31,6 +31,7 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'sainnhe/edge'
     Plugin 'morhetz/gruvbox'
+    Plugin 'segeljakt/vim-stealth'
 call vundle#end()
 
 filetype plugin indent on
