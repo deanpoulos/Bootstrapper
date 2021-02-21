@@ -130,5 +130,5 @@ alt + {1-3}
     sh ~/.config/sxhkd/.workspace {1-3}
 
 # focus or send to the given desktop
-shift + {_, alt + }{1-6}
+ctrl + {_, alt + }{1-6}
     bspc {desktop -f , node -d} '^{1-6}' 
