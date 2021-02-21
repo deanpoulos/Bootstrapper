@@ -18,6 +18,15 @@ ln -s configs/*
 # install all bootstrap packages
 sudo pacman -Sy $( cat configs/bootstrap-applications )
 
+# add GRUB theme
+git clone https://github.com/vinceliuice/grub2-themes.git
+sudo grub2-themes/install.sh -b -t tela
+rm -rf grub2-themes
+
+sudoedit /etc/default/grub
+# -> change GRUB_THEME value to GRUB_THEME="/boot/grub/themes/Vimix/theme.txt"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
 # remove xfce's wm setup
 sudo xfce4-session-settings
 # -> change restart style of xfwm4, xfce4-panel, xfdesktop to Never

@@ -11,3 +11,4 @@
 .config/mutt/cache
 
 .config/polybar/panels/launch.sh
+.config/polybar/panels/config.ini
