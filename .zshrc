@@ -8,6 +8,7 @@ export ZSH="/home/dean/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#ZSH_THEME="half-life"
 ZSH_THEME="half-life"
 ZSH_THEME_RANDOM_CANDIDATES=(
     "agnoster"
@@ -43,6 +44,8 @@ alias logout='kill -9 -1'
 alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
 alias svim='sudo -E vim'
+alias prolog='swipl'
+alias xprop='xprop | grep CLASS'
 
 #
 # # ex - archive extractor
@@ -78,13 +81,14 @@ cf ()
         elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
         elif [ $1 = comp ]; then vim ~/.config/picom/picom.conf
-        elif [ $1 = zsh ]; then vim ~/.zshrc
+        elif [ $1 = zsh ]; then vim ~/.zshrc && zsh
         elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
         elif [ $1 = kitty ]; then vim ~/.config/kitty/kitty.conf
         elif [ $1 = bar ]; then vim ~/.config/polybar/panels/config.ini
         elif [ $1 = mime ]; then vim ~/.config/mimeapps.list
+        elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -100,13 +104,28 @@ fresh ()
         elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
-        elif [ $1 = comp ]; then pkill picom || sleep 1 && nohup picom --experimental-backends --backend glx --xrender-sync-fence & 
+        elif [ $1 = comp ]; then pkill picom || sleep 1 && nohup picom --experimental-backends --backend glx --xrender-sync-fence >> /dev/null & 
         elif [ $1 = zsh ]; then zsh
         elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
+        elif [ $1 = fetch ]; then neofetch
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
         fi
     else
         echo "Not enough arguments provided.\nSyntax: fresh <shortcut>"
+    fi
+}
+
+font()
+{
+    if [ $1 = -i ]; then
+        if [ $2 ]; then
+            cp $2 /home/dean/.local/share/fonts/
+            fc-cache -f -v
+        else
+            echo "Usage: font -i <font-name.*tf>"
+        fi
+    else
+        echo "Usage: font -i <font-name.*tf>"
     fi
 }
 
