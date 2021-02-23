@@ -32,3 +32,4 @@ bspc rule -a Spotify state=floating hidden=on
 bspc rule -a Xscreensaver-demo state=floating
 #bspc rule -a kitty state=pseudo_tiled
 bspc rule -a Gpick state=floating
+bspc rule -a Nm-connection-editor state=floating
