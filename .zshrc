@@ -45,6 +45,7 @@ alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
 alias svim='sudo -E vim'
 alias prolog='swipl'
+alias xprop='xprop | grep CLASS'
 
 #
 # # ex - archive extractor
