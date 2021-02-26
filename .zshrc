@@ -89,6 +89,7 @@ cf ()
         elif [ $1 = bar ]; then vim ~/.config/polybar/panels/config.ini
         elif [ $1 = mime ]; then vim ~/.config/mimeapps.list
         elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
+        elif [ $1 = fstab ]; then sudoedit /etc/fstab
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -130,6 +131,11 @@ font()
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+cse()
+{
+    sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/unsw
+}
 
 DISABLE_UPDATE_PROMPT="true"
 
