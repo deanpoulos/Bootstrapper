@@ -1,4 +1,4 @@
-##
+#
 ###########################
 # application hotkeys
 ###########################
@@ -45,13 +45,16 @@ alt + Return
     rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
 
 # take screenshot
-Super_L + shift + s
-    xfce4-screenshooter -c -r
+#Super_L + shift + s
+#    xfce4-screenshooter -c -r
 
 # rofi window switcher
-Super_L + Tab
-	rofi -no-config -no-lazy-grab -show window -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
+#Super_L + Tab
+#	rofi -no-config -no-lazy-grab -show window -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
 
+# xprop
+alt + x
+    kitty -e 'xprop | grep CLASS && input'
 
 # whisker menu
 #{Super_L,Super_R}
