@@ -90,6 +90,7 @@ cf ()
         elif [ $1 = mime ]; then vim ~/.config/mimeapps.list
         elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
         elif [ $1 = fstab ]; then sudoedit /etc/fstab
+        elif [ $1 = install ]; then vim ~/configs/bootstrap/install.txt
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
