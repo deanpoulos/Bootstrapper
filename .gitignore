@@ -12,3 +12,5 @@
 
 .config/polybar/panels/launch.sh
 .config/polybar/panels/config.ini
+
+.oh-my-zsh/cache
