@@ -82,7 +82,7 @@ cf ()
         elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
         elif [ $1 = comp ]; then vim ~/.config/picom/picom.conf
         elif [ $1 = zsh ]; then vim ~/.zshrc && zsh
-        elif [ $1 = mutt ]; then vim ~/.config/mutt/muttrc
+        elif [ $1 = email ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
         elif [ $1 = kitty ]; then vim ~/.config/kitty/kitty.conf
@@ -91,6 +91,7 @@ cf ()
         elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
         elif [ $1 = fstab ]; then sudoedit /etc/fstab
         elif [ $1 = install ]; then vim ~/configs/bootstrap/install.txt
+        elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 

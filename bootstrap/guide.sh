@@ -1,3 +1,5 @@
+#!/bin/bash 
+
 usermod -a -G wheel dean 	# add dean to wheel group
 usermod -g wheel dean	 	# add wheel as primary group
 sudo visudo /etc/sudoers/	# add no-password sudo-ing
@@ -6,9 +8,9 @@ sudo visudo /etc/sudoers/	# add no-password sudo-ing
 sudo pacman -Syu		# update distro
 
 # change default directories to uncapitalised versions
-sudo vim /etc/xdg/user-dirs.defaults 
+sudoedit /etc/xdg/user-dirs.defaults 
 rm -rf ~/*
-mkdir ~/downloads ~/desktop
+mkdir ~/downloads ~/desktop ~/documents
 
 # soft-link dotfiles
 git clone https://www.github.com/deanpoulos/dotfiles.git
@@ -50,9 +52,14 @@ cd /usr/local/bin && sudo ln -s ~/configs/bin/sxhkd-help
 # synchronise time with network time
 sudo ntpd -qg
 
-# synchronise
-pacaur -S onedrive-git  # github.com/skillion/onedrive
+# synchronise onedrive
 onedrive
 
 # set default cursor
 xsetroot -cursor_name left_ptr
+
+# change cursor to adwaita
+xfce4-settings-mangaer  # Mouse & Touchpad > Theme
+
+# install brave extensions
+brave   # gruvbox theme, google dark-theme, video speed controller
