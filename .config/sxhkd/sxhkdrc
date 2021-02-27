@@ -19,7 +19,7 @@ alt + f
 
 # open email-client
 alt + e
-    neomutt
+    thunderbird
 
 # open settings manager
 alt + s

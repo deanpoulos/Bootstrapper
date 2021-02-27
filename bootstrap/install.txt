@@ -1,1 +1,7 @@
-base-devel kitty vim neomutt feh brave bspwm sxhkd picom polybar aurman zsh bash-completion python python-pip nitrogen atop calc code dmenu rofi gimp gpick grub-theme-manjaro grub-theme-vimix htop mpd neofetch net-tools npm noto-fonts powerline-fonts ruby rsync snapd spotifyd spotify-tui texmaker ttf-iosevka ttf-dejavu vlc yay zsh-autosuggestions zsh-syntax-highlighting binutils ntp xscreensaver todoist lynx newsboat onedrive-git sshfs pasystray 
+base-devel kitty vim neomutt feh brave bspwm sxhkd picom polybar aurman zsh
+bash-completion python python-pip nitrogen atop calc code dmenu rofi gimp gpick
+grub-theme-manjaro grub-theme-vimix htop mpd neofetch net-tools npm noto-fonts
+powerline-fonts ruby rsync snapd spotifyd spotify-tui texmaker ttf-iosevka
+ttf-dejavu vlc yay zsh-autosuggestions zsh-syntax-highlighting binutils ntp
+xscreensaver todoist lynx newsboat onedrive-git sshfs pasystray urlscan
+youtuve-viewer task-spooler youtubde-dl abook url-view mailcap teams thunderbird

@@ -24,6 +24,7 @@ bspc config pointer_action3 resize_side
 bspc config pointer_action3 resize_corner
 bspc config pointer_action1 move
 bspc config automatic_scheme longest_side
+bspc config focus_follows_pointer true
 
 # application-specific rules
 bspc rule -a Xfce4-settings-manager state=floating follow=on
@@ -34,7 +35,8 @@ bspc rule -a Xscreensaver-demo state=floating
 bspc rule -a Gpick state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Xfce4-session-settings state=floating
-bspc rule -a Xfce4-power-manager-settings state=floating
+#bspc rule -a Xfce4-power-manager-settings state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Pamac-manager state=floating
 bspc rule -a Eog state=floating
+bspc rule -a Xfce4-mime-settings state=floating
