@@ -37,5 +37,7 @@ bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Xfce4-session-settings state=floating
 bspc rule -a Xfce4-power-manager-settings state=floating
 bspc rule -a Pavucontrol state=floating
+bspc rule -a Pamac-manager state=floating
+bspc rule -a Eog state=floating
 bspc rule -a Xfce4-mime-settings state=floating
 bspc rule -a Pamac-manager state=floating
