@@ -91,6 +91,7 @@ cf ()
         elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
         elif [ $1 = fstab ]; then sudoedit /etc/fstab
         elif [ $1 = install ]; then vim ~/configs/bootstrap/install.txt
+        elif [ $1 = joplin ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
@@ -143,4 +144,5 @@ DISABLE_UPDATE_PROMPT="true"
 
 # Print "motd"
 
+clear
 DISPLAY="" cat ~/.fetch-output
