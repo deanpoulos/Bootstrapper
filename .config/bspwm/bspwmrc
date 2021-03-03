@@ -29,17 +29,20 @@ bspc config focus_follows_pointer true
 # application-specific rules
 bspc rule -a Xfce4-settings-manager state=floating follow=on
 bspc rule -a Thunar state=floating follow=on
-bspc rule -a Spotify state=floating hidden=on
+bspc rule -a Spotify state=floating hidden==on
+bspc rule -a spotify state=floating hidden==on
 bspc rule -a Xscreensaver-demo state=floating
-bspc rule -a kitty state=pseudo_tiled
+#bspc rule -a kitty state=pseudo_tiled
 bspc rule -a Gpick state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Xfce4-session-settings state=floating
 bspc rule -a Xfce4-power-manager-settings state=floating
 bspc rule -a Pavucontrol state=floating
 bspc rule -a Pamac-manager state=floating
-bspc rule -a Eog state=floating
+#bspc rule -a Eog state=floating
 bspc rule -a Xfce4-mime-settings state=floating
+bspc rule -a Gwyddion state=floating
+bspc rule -a "photoshop.exe" state=psuedo_tiled
 bspc rule -a Pamac-manager state=floating
 bspc rule -a "Manjaro Settings Manager" state=floating
 bspc rule -a manjaro-settings-manager state=floating

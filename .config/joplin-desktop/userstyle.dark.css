@@ -7,7 +7,7 @@
     --grey: #575856;
     --dark-grey: #272728;
     --darker-grey: #1D2024;
-    --black: #171717;
+    --black: #131517;
     --base-size-1: 1px;
     --base-size-4: 4px;
     --base-size-8: 8px;
@@ -43,7 +43,7 @@
 
 body {
     font-family: var(--font-sans) !important;
-    font-weight: var(--font-weight-bold) !important;
+    font-weight: var(--font-weight-base) !important;
     color: var(--dark-white);
     background-color: var(--black);
     font-size: var(--font-size) !important;
@@ -54,21 +54,10 @@ p, h1, h2, h3, h4, h5, h6, ul, table {
     margin-bottom: var(--base-size-8);
 }
 
-b, strong {
-    color: #D7402E;
-}
-
 h1, h2, h3, h4 {
-    font-weight: var(--font-weight-base) !important;
+    font-weight: var(--font-weight-light) !important;
     letter-spacing: 0.01em;
     margin-top: var(--base-size-24);
-}
-
-img {
-    filter: invert(91%);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h1 {
@@ -106,15 +95,7 @@ p, li {
 
 ol li, ul li {
     margin-bottom: var(--base-size-4);
-    vertical-align: middle;
 }
-
-li span {
-    vertical-align: middle;
-}
-
-ul li::before {
-    color: var(--grey);
 
 ul ul {
     /* list-style-type: cjk-heavenly-stem; */
