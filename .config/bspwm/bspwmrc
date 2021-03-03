@@ -41,3 +41,5 @@ bspc rule -a Pamac-manager state=floating
 bspc rule -a Eog state=floating
 bspc rule -a Xfce4-mime-settings state=floating
 bspc rule -a Pamac-manager state=floating
+bspc rule -a "Manjaro Settings Manager" state=floating
+bspc rule -a manjaro-settings-manager state=floating
