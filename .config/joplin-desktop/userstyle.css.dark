@@ -1,7 +1,7 @@
 /* html-ized markdown */
 /* designed by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
 :root {
-    --white: #ffffff;
+    --white: #e3e3e3;
     --dark-white: #EEF0EA;
     --light-grey: #A3A79F;
     --grey: #575856;
@@ -44,8 +44,8 @@
 body {
     font-family: var(--font-sans) !important;
     font-weight: var(--font-weight-base) !important;
-    color: var(--darker-grey);
-    background-color: var(--white);
+    color: var(--dark-white);
+    background-color: var(--black);
     font-size: var(--font-size) !important;
 }
 
@@ -86,27 +86,16 @@ h4 {
 p, li {
     /* font-weight: var(--font-weight-base) !important; */
     letter-spacing: .03em;
-    color: var(--black);
+    color: var(--light-grey);
     margin-bottom: var(--base-size-24);
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
-b, strong {
-    color: var(--black);
-}
-
 ol li, ul li {
     margin-bottom: var(--base-size-4);
 }
-
-li {
-    vertical-align: middle;
-}
-
-ul li::before {
-    color: var(--grey);
 
 ul ul {
     /* list-style-type: cjk-heavenly-stem; */
