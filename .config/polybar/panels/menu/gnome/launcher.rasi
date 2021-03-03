@@ -21,7 +21,7 @@ configuration {
 
 * {
   al:   #00000000;
-  bg:   #0000004C;
+  bg:   #000000CC;
   bga:  #282828FF;
   fg:   #F5F5F5FF;
   ac:   #262726FF;

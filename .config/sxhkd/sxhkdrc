@@ -135,7 +135,7 @@ alt + {Up,Down}
 
 # focus the next/previous desktop
 alt + {Left,Right}
-	bspc node -f {prev,next}
+	bspc node -f {prev,next}.local.!above
 
 alt + {1-3}
     sh ~/.config/sxhkd/.workspace {1-3}

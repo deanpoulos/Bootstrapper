@@ -143,4 +143,4 @@ DISABLE_UPDATE_PROMPT="true"
 
 # Print "motd"
 
-DISPLAY="" fetch
+DISPLAY="" cat ~/.fetch-output
