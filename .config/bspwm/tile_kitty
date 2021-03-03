@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ bspc subscribe all | while read -a msg ; do
+    if [ $( bspc query -N -d $somedesktop -n .window.\!hidden | wc -l ) -ge 2 ] 
+    then
+        for kitty in $( xdo id -N kitty ); do
+            bspc node $kitty -t tiled
+        done
+    else
+        for kitty in $( xdo id -N kitty ); do
+            bspc node $kitty -t pseudo_tiled
+        done
+    fi
+ done
