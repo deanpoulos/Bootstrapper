@@ -1,14 +1,37 @@
-#!/bin/bash
+#!/usr/bin/python
+import subprocess
+import json
 
- bspc subscribe all | while read -a msg ; do
-    if [ $( bspc query -N -d $somedesktop -n .window.\!hidden | wc -l ) -ge 2 ] 
-    then
-        for kitty in $( xdo id -N kitty ); do
-            bspc node $kitty -t tiled
-        done
-    else
-        for kitty in $( xdo id -N kitty ); do
-            bspc node $kitty -t pseudo_tiled
-        done
-    fi
- done
+def bash(cmd): 
+    # run the command
+    process = subprocess.Popen(cmd.split(' '), stdout=subprocess.PIPE)
+    return process.communicate()[0]  # return just the output
+
+def intersection(l1, l2):
+    return [x for x in l1 if x in l2]
+
+def listify(s):
+    return [x for x in s.decode().split('\n') if x != '']
+
+# get a list of all kitty terminals 
+kitties = listify(bash(f"xdo id -N kitty"))
+
+# for every desktop
+for desktop in ["I", "II", "III", "IV", "V", "VI"]:
+    # get a list of tiled or pseudo tiled windows in desktop
+    windows = []
+    for state in ['tiled', 'pseudo_tiled']:
+        windows.extend(listify(bash(f"bspc query -N -d {desktop} -n .window.{state}")))
+
+    #print(f"desktop {desktop} windows {windows}.")
+
+    # if there are more than two windows on this desktop
+    if len(windows) >= 2:
+        # tile terminal
+        for kitty in intersection(kitties, windows):
+            bash(f"bspc node {kitty} -t tiled")
+    else:
+        # pseudo-tile terminal
+        for kitty in intersection(kitties, windows):
+            bash(f"bspc node {kitty} -t pseudo_tiled")
+

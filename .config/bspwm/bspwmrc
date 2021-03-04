@@ -6,7 +6,7 @@ nitrogen --restore
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
 xsetroot -cursor_name left_ptr
 picom --experimental-backends --backend glx --xrender-sync-fence &
-~/.config/bspwm/tile_kitty &
+~/.config/bspwm/subscriber &
 
 # monitor configuration
 source ~/.config/bspwm/monitors
