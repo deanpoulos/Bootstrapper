@@ -32,6 +32,7 @@ call vundle#begin()
     Plugin 'sainnhe/edge'
     Plugin 'morhetz/gruvbox'
     Plugin 'segeljakt/vim-stealth'
+    Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 filetype plugin indent on

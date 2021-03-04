@@ -39,7 +39,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add sudo !! feature
 alias ii='$(fc -ln -1)'
-alias fetch='clear; neofetch --disable gpu'
+alias fetch='clear; neofetch --disable gpu >> ~/.fetch_output; cat ~/.fetch-output'
 alias logout='kill -9 -1'
 alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
@@ -91,7 +91,9 @@ cf ()
         elif [ $1 = fetch ]; then vim ~/.config/neofetch/config.conf
         elif [ $1 = fstab ]; then sudoedit /etc/fstab
         elif [ $1 = install ]; then vim ~/configs/bootstrap/install.txt
-        elif [ $1 = joplin ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
+        elif [ $1 = guide ]; then vim ~/configs/bootstrap/guide.sh
+        elif [ $1 = jopstyle ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
+        elif [ $1 = jopchrome ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
@@ -121,13 +123,14 @@ fresh ()
 
 font()
 {
-    if [ $1 = -i ]; then
+    if [ $1 = "-i" ]; then
         if [ $2 ]; then
             cp $2 /home/dean/.local/share/fonts/
-            fc-cache -f -v
         else
             echo "Usage: font -i <font-name.*tf>"
         fi
+    elif [ $1 = "-u" ]; then
+        fc-cache -f -v
     else
         echo "Usage: font -i <font-name.*tf>"
     fi

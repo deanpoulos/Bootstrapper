@@ -6,7 +6,7 @@ nitrogen --restore
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
 xsetroot -cursor_name left_ptr
 picom --experimental-backends --backend glx --xrender-sync-fence &
-# ~/.config/bspwm/startup.sh &
+~/.config/bspwm/tile_kitty &
 
 # monitor configuration
 source ~/.config/bspwm/monitors
@@ -44,3 +44,5 @@ bspc rule -a Xfce4-mime-settings state=floating
 bspc rule -a Gwyddion state=floating
 bspc rule -a 'Photoshop.exe' state=psuedo_tiled
 bspc rule -a Pamac-manager state=floating
+bspc rule -a "Manjaro Settings Manager" state=floating
+bspc rule -a manjaro-settings-manager state=floating
