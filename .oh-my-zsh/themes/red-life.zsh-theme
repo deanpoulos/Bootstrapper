@@ -26,12 +26,12 @@ if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
     limegreen="%F{118}"
 else
     aqua="%F{114}"
-    orange="%F{166}"
-    purple="$fg[magenta]"
-    red="%F{196}"
-    limegreen="%F{118}"
+    orange="%F{208}"
+    purple="%F{12}"
+    blue="%F{13}"
+    red="%F{9}"
+    limegreen="%F{10}"
     yellow="%F{11}"
-    lightred="%F{204}"
 fi
 
 # enable VCS systems you use
@@ -51,8 +51,8 @@ zstyle ':vcs_info:*:prompt:*' check-for-changes true
 PR_RST="%{${reset_color}%}"
 FMT_BRANCH=" on %{$purple%}%b%u%c${PR_RST}"
 FMT_ACTION=" performing a %{$limegreen%}%a${PR_RST}"
-FMT_UNSTAGED="%{$orange%} ●"
-FMT_STAGED="%{$limegreen%} ●"
+FMT_UNSTAGED="%{$purple%} ●"
+FMT_STAGED="%{$blue%} ●"
 
 zstyle ':vcs_info:*:prompt:*' unstagedstr   "${FMT_UNSTAGED}"
 zstyle ':vcs_info:*:prompt:*' stagedstr     "${FMT_STAGED}"
