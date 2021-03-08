@@ -8,8 +8,7 @@ export ZSH="/home/dean/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="half-life"
-ZSH_THEME="half-life"
+ZSH_THEME="red-life"
 ZSH_THEME_RANDOM_CANDIDATES=(
     "agnoster"
 	"half-life"
@@ -39,7 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add sudo !! feature
 alias ii='$(fc -ln -1)'
-alias fetch='clear; neofetch --disable gpu >> ~/.fetch_output; cat ~/.fetch-output'
+alias fetch='clear; neofetch --disable gpu > ~/.fetch_output; cat ~/.fetch_output'
 alias logout='kill -9 -1'
 alias swipl='swi-prolog.swipl'
 alias pacman='sudo pacman'
@@ -148,4 +147,4 @@ DISABLE_UPDATE_PROMPT="true"
 # Print "motd"
 
 clear
-DISPLAY="" cat ~/.fetch-output
+DISPLAY="" cat ~/.fetch_output

@@ -19,17 +19,19 @@ autoload -Uz vcs_info
 
 #use extended color palette if available
 if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
-    turquoise="%F{81}"
+    aqua="%F{81}"
     orange="%F{166}"
     purple="%F{135}"
-    hotpink="%F{161}"
+    red="%F{161}"
     limegreen="%F{118}"
 else
-    turquoise="$fg[cyan]"
-    orange="$fg[yellow]"
+    aqua="%F{114}"
+    orange="%F{166}"
     purple="$fg[magenta]"
-    hotpink="$fg[red]"
-    limegreen="$fg[green]"
+    red="%F{196}"
+    limegreen="%F{118}"
+    yellow="%F{11}"
+    lightred="%F{204}"
 fi
 
 # enable VCS systems you use
@@ -47,7 +49,7 @@ zstyle ':vcs_info:*:prompt:*' check-for-changes true
 # %R - repository path
 # %S - path in the repository
 PR_RST="%{${reset_color}%}"
-FMT_BRANCH=" on %{$turquoise%}%b%u%c${PR_RST}"
+FMT_BRANCH=" on %{$purple%}%b%u%c${PR_RST}"
 FMT_ACTION=" performing a %{$limegreen%}%a${PR_RST}"
 FMT_UNSTAGED="%{$orange%} ●"
 FMT_STAGED="%{$limegreen%} ●"
@@ -81,9 +83,9 @@ function steeef_precmd {
         # check for untracked files or updated submodules, since vcs_info doesn't
         if [[ ! -z $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
             PR_GIT_UPDATE=1
-            FMT_BRANCH="${PM_RST} on %{$turquoise%}%b%u%c%{$hotpink%} ●${PR_RST}"
+            FMT_BRANCH="${PM_RST} on %{$yellow%}%b%u%c%{$red%} ●${PR_RST}"
         else
-            FMT_BRANCH="${PM_RST} on %{$turquoise%}%b%u%c${PR_RST}"
+            FMT_BRANCH="${PM_RST} on %{$yellow%}%b%u%c${PR_RST}"
         fi
         zstyle ':vcs_info:*:prompt:*' formats       "${FMT_BRANCH}"
 
@@ -93,4 +95,4 @@ function steeef_precmd {
 }
 add-zsh-hook precmd steeef_precmd
 
-PROMPT=$'%{$hotpink%}%n%{$reset_color%} in %{$turquoise%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$orange%} λ%{$reset_color%} '
+PROMPT=$'%{$aqua%}%n%{$reset_color%} in %{$red%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$yellow%} λ%{$reset_color%} '
