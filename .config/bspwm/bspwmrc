@@ -27,6 +27,7 @@ bspc config automatic_scheme longest_side
 bspc config focus_follows_pointer true
 
 # application-specific rules
+bspc rule -a *:kitty state=pseudo_tiled rectangle=840x540+0+0
 bspc rule -a Xfce4-settings-manager state=floating follow=on
 bspc rule -a Thunar state=floating follow=on
 bspc rule -a Spotify state=floating hidden==on
@@ -46,4 +47,6 @@ bspc rule -a Pamac-manager state=floating
 bspc rule -a manjaro-settings-manager state=floating
 bspc rule -a matplotlib state=floating
 bspc rule -a feh state=floating
-bspc rule -a *:kitty state=pseudo_tiled rectangle=840x540+0+0
+bspc rule -a Nitrogen state=floating
+bspc rule -a Lightdm-gtk-greeter-settings state=floating
+
