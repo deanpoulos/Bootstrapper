@@ -51,8 +51,8 @@ zstyle ':vcs_info:*:prompt:*' check-for-changes true
 PR_RST="%{${reset_color}%}"
 FMT_BRANCH=" on %{$purple%}%b%u%c${PR_RST}"
 FMT_ACTION=" performing a %{$limegreen%}%a${PR_RST}"
-FMT_UNSTAGED="%{$purple%} ●"
-FMT_STAGED="%{$blue%} ●"
+FMT_UNSTAGED="%{$yellow%} ●"
+FMT_STAGED="%{$limegreen%} ●"
 
 zstyle ':vcs_info:*:prompt:*' unstagedstr   "${FMT_UNSTAGED}"
 zstyle ':vcs_info:*:prompt:*' stagedstr     "${FMT_STAGED}"
@@ -95,4 +95,4 @@ function steeef_precmd {
 }
 add-zsh-hook precmd steeef_precmd
 
-PROMPT=$'%{$aqua%}%n%{$reset_color%} in %{$red%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$yellow%} λ%{$reset_color%} '
+PROMPT=$'%{$aqua%}%n%{$reset_color%} in %{$red%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$red%} $%{$reset_color%} '
