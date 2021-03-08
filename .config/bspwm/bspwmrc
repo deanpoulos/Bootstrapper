@@ -44,5 +44,6 @@ bspc rule -a Xfce4-mime-settings state=floating
 bspc rule -a Gwyddion state=floating
 bspc rule -a 'Photoshop.exe' state=psuedo_tiled
 bspc rule -a Pamac-manager state=floating
-bspc rule -a "Manjaro Settings Manager" state=floating
 bspc rule -a manjaro-settings-manager state=floating
+bspc rule -a matplotlib state=floating
+bspc rule -a feh state=floating
