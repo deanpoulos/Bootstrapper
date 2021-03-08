@@ -36,7 +36,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Add sudo !! feature
 alias ii='$(fc -ln -1)'
 alias fetch='clear; neofetch --disable gpu > ~/.fetch_output; cat ~/.fetch_output'
 alias logout='kill -9 -1'
