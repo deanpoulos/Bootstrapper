@@ -1,0 +1,18 @@
+[
+  {
+    "command": "focusElementSideBar",
+    "accelerator": null
+  },
+  {
+    "command": "focusElementNoteTitle",
+    "accelerator": null
+  },
+  {
+    "command": "toggleSideBar",
+    "accelerator": "Ctrl+Shift+S"
+  },
+  {
+    "command": "toggleNoteList",
+    "accelerator": "Ctrl+Shift+N"
+  }
+]
