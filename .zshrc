@@ -154,3 +154,10 @@ DISABLE_UPDATE_PROMPT="true"
 
 clear
 DISPLAY="" cat ~/.fetch_output
+
+# To differentiate aliases from other command types
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=yellow'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
+ZSH_HIGHLIGHT_STYLES[globbing]='none'
