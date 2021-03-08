@@ -25,6 +25,10 @@ alt + e
 alt + s
     xfce4-settings-manager
 
+# hide focused window
+alt + h
+    bspc node --flag hidden=on
+
 # open brave
 alt + b
     brave
