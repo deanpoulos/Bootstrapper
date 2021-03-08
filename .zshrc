@@ -86,7 +86,7 @@ cf ()
         elif [ $1 = comp ]; then vim ~/.config/picom/picom.conf
         elif [ $1 = zsh ]; then
             if [ $2 ]; then
-                if [ $2 = theme ]; then vim ~/.oh-my-zsh/themes/red-life.zsh-theme
+                if [ $2 = theme ]; then vim ~/.zsh_theme
                 else; echo "Syntax error: cf zsh [theme]"; fi
             else; vim ~/.zshrc && zsh; fi
         elif [ $1 = email ]; then vim ~/.config/mutt/muttrc
