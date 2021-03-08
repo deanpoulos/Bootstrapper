@@ -25,7 +25,8 @@ if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
     red="%F{161}"
     limegreen="%F{118}"
 else
-    aqua="%F{114}"
+    grey="%F{244}"
+    aqua="%F{15}"
     orange="%F{208}"
     purple="%F{12}"
     blue="%F{13}"
@@ -95,4 +96,4 @@ function steeef_precmd {
 }
 add-zsh-hook precmd steeef_precmd
 
-PROMPT=$'%{$aqua%}%n%{$reset_color%} in %{$red%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$red%} λ%{$reset_color%} '
+PROMPT=$'\e[1m%{$grey%}%n%{$reset_color%} in %{$red%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$red%} λ%{$reset_color%} '

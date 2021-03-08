@@ -165,8 +165,8 @@ clear
 cat ~/.fetch_output
 
 # To differentiate aliases from other command types
-ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=cyan,bold'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=green,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
