@@ -46,4 +46,4 @@ bspc rule -a Pamac-manager state=floating
 bspc rule -a manjaro-settings-manager state=floating
 bspc rule -a matplotlib state=floating
 bspc rule -a feh state=floating
-bspc rule -a *:kitty state=pseudo_tiled rectangle=960x540+0+0
+bspc rule -a *:kitty state=pseudo_tiled rectangle=720x540+0+0
