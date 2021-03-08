@@ -91,8 +91,14 @@ cf ()
         elif [ $1 = fstab ]; then sudoedit /etc/fstab
         elif [ $1 = install ]; then vim ~/configs/bootstrap/install.txt
         elif [ $1 = guide ]; then vim ~/configs/bootstrap/guide.sh
-        elif [ $1 = jopstyle ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
-        elif [ $1 = jopchrome ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
+        elif [ $1 = notes ]; then 
+            if [ $2 ]; then
+                if [ $2 = md ]; then vim ~/configs/.config/joplin-desktop/userstyle.css
+                elif [ $2 = app ]; then vim ~/configs/.config/joplin-desktop/userchrome.css
+                else; echo "Syntax error: cf notes [md | app]"
+                fi
+            else; echo "Syntax error: cf notes [md | app]"
+            fi
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi

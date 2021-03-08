@@ -17,7 +17,7 @@ def listify(s):
 kitties = listify(bash(f"xdo id -N kitty"))
 
 # for every desktop
-for desktop in ["I", "II", "III", "IV", "V", "VI"]:
+for desktop in listify(bash('bspc query -D --names')):
     # get a list of tiled or pseudo tiled windows in desktop
     windows = []
     for state in ['tiled', 'pseudo_tiled']:

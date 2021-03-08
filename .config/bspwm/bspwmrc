@@ -32,7 +32,6 @@ bspc rule -a Thunar state=floating follow=on
 bspc rule -a Spotify state=floating hidden==on
 bspc rule -a spotify state=floating hidden==on
 bspc rule -a Xscreensaver-demo state=floating
-#bspc rule -a kitty state=pseudo_tiled
 bspc rule -a Gpick state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Xfce4-session-settings state=floating
@@ -47,3 +46,4 @@ bspc rule -a Pamac-manager state=floating
 bspc rule -a manjaro-settings-manager state=floating
 bspc rule -a matplotlib state=floating
 bspc rule -a feh state=floating
+bspc rule -a *:kitty state=pseudo_tiled rectangle=100x100+0+0
