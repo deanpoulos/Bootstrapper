@@ -30,7 +30,7 @@ else
     purple="%F{12}"
     blue="%F{13}"
     red="%F{9}"
-    limegreen="%F{10}"
+    limegreen="%F{2}"
     yellow="%F{11}"
 fi
 

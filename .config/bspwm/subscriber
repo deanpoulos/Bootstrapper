@@ -1,5 +1,5 @@
 #!/bin/bash
 
-bspc subscribe all | while read -a msg ; do
+bspc subscribe node_add node_remove | while read -a msg ; do
     ~/.config/bspwm/tile_kitty    
 done

@@ -75,12 +75,21 @@ cf ()
 {
     if [ $1 ]
     then 
-        if [ $1 = wm ]; then vim ~/.config/bspwm/bspwmrc
+        if [ $1 = wm ]; then 
+            if [ $2 ]; then 
+                if [ $2 = tiler ]; then vim ~/.config/bspwm/tile_kitty
+                elif [ $2 = subscriber ]; then vim ~/.config/bspwm/subscriber
+                else; echo "Syntax error: cf wm [tiler]"; fi
+            else; vim ~/.config/bspwm/bspwmrc; fi
         elif [ $1 = start ]; then vim ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then vim ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then vim ~/.config/sxhkd/sxhkdrc
         elif [ $1 = comp ]; then vim ~/.config/picom/picom.conf
-        elif [ $1 = zsh ]; then vim ~/.zshrc && zsh
+        elif [ $1 = zsh ]; then
+            if [ $2 ]; then
+                if [ $2 = theme ]; then vim ~/.oh-my-zsh/themes/red-life.zsh-theme
+                else; echo "Syntax error: cf zsh [theme]"; fi
+            else; vim ~/.zshrc && zsh; fi
         elif [ $1 = email ]; then vim ~/.config/mutt/muttrc
         elif [ $1 = zshenv ]; then vim ~/.zshenv
         elif [ $1 = vim ]; then vim ~/.vimrc
@@ -111,7 +120,7 @@ fresh ()
 {
     if [ $1 ] 
     then
-        if [ $1 = wm ]; then ~/.config/bspwm/bspwmrc
+        if [ $1 = wm ]; then pkill subscriber; pkill tile_kitty; ~/.config/bspwm/bspwmrc
         elif [ $1 = start ]; then sh ~/.config/bspwm/startup.sh
         elif [ $1 = colours ]; then ~/.config/bspwm/colours.sh
         elif [ $1 = keys ]; then pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
@@ -153,10 +162,11 @@ DISABLE_UPDATE_PROMPT="true"
 # Print "motd"
 
 clear
-DISPLAY="" cat ~/.fetch_output
+cat ~/.fetch_output
 
 # To differentiate aliases from other command types
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[function]='fg=cyan,bold'
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=yellow,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=yellow'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=8'
