@@ -33,6 +33,9 @@ alt + u
 alt + h
     bspc node --flag hidden=on
 
+alt + u
+    bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off
+
 # open brave
 alt + b
     brave
