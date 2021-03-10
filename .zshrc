@@ -191,7 +191,7 @@ sync()
                 echo "Please answer yes or no."
             fi
         done
-    else:
+    else
         echo "Usage: sync [pull|push]"
     fi
 }
