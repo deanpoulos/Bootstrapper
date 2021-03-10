@@ -156,6 +156,18 @@ cse()
     sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/unsw
 }
 
+sync()
+{
+    OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
+    if [ $1 = pull ]; then
+        rsync -av --exclude env $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+    elif [ $1 = push ]; then
+        rsync -av --exclude env ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+    else:
+        echo "Usage: sync [pull|push]"
+    fi
+}
+
 DISABLE_UPDATE_PROMPT="true"
 
 # Print "motd"
