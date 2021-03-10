@@ -160,9 +160,37 @@ sync()
 {
     OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
     if [ $1 = pull ]; then
-        rsync -av --exclude env $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+        rsync -anv --exclude env --delete $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+        echo -n "\nDo you wish to commit to these changes (y/n)? "
+        while true; do
+            read answer
+            if [ "$answer" != "${answer#[Yy]}" ]; then
+                rsync -av --exclude env --delete $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+                echo "\nDone!"
+                break
+            elif [ "$answer" != "${answer#[Nn]}" ]; then
+                echo "No changes committed."
+                break
+            else
+                echo "Please answer yes or no."
+            fi
+        done
     elif [ $1 = push ]; then
-        rsync -av --exclude env ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+        rsync -anv --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+        echo -n "\nDo you wish to push to these changes (y/n)? "
+        while true; do
+            read answer
+            if [ "$answer" != "${answer#[Yy]}" ]; then
+                rsync -av --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+                echo "\nDone!"
+                break
+            elif [ "$answer" != "${answer#[Nn]}" ]; then
+                echo "No changes pushed."
+                break
+            else
+                echo "Please answer yes or no."
+            fi
+        done
     else:
         echo "Usage: sync [pull|push]"
     fi
