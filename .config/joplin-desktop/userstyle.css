@@ -116,18 +116,6 @@ ol li, ul li {
     vertical-align: middle;
 }
 
-li span {
-    vertical-align: middle;
-}
-
-ul li::before {
-    color: var(--grey);
-
-ul ul {
-    /* list-style-type: cjk-heavenly-stem; */
-    list-style-type: disc;
-}
-
 hr {
     padding: var(--base-size-24) !important;
 }
