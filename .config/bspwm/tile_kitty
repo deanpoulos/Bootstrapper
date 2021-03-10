@@ -21,7 +21,8 @@ for desktop in listify(bash('bspc query -D --names')):
     # get a list of tiled or pseudo tiled windows in desktop
     windows = []
     for state in ['tiled', 'pseudo_tiled']:
-        windows.extend(listify(bash(f"bspc query -N -d {desktop} -n .window.{state}")))
+        windows.extend(listify(bash(f"bspc query -N -d {desktop} -n
+            .window.!hidden.{state}")))
 
     #print(f"desktop {desktop} windows {windows}.")
 
