@@ -176,12 +176,12 @@ sync()
             fi
         done
     elif [ $1 = push ]; then
-        rsync -anv --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+        rsync -anv --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:documents/UNSW/
         echo -n "\nDo you wish to push to these changes (y/n)? "
         while true; do
             read answer
             if [ "$answer" != "${answer#[Yy]}" ]; then
-                rsync -av --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:/documents/UNSW/
+                rsync -av --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:documents/UNSW/
                 echo "\nDone!"
                 break
             elif [ "$answer" != "${answer#[Nn]}" ]; then
