@@ -151,21 +151,21 @@ font()
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-cse()
+vlab()
 {
-    sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/unsw
+    sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/vlab
 }
 
 sync()
 {
     OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
     if [ $1 = pull ]; then
-        rsync -anv --exclude env --delete $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+        rsync -anv --exclude env --delete $OTHER_NODE:unsw ~/unsw
         echo -n "\nDo you wish to commit to these changes (y/n)? "
         while true; do
             read answer
             if [ "$answer" != "${answer#[Yy]}" ]; then
-                rsync -av --exclude env --delete $OTHER_NODE:documents/UNSW/ ~/documents/UNSW/
+                rsync -av --exclude env --delete $OTHER_NODE:unsw ~/unsw
                 echo "\nDone!"
                 break
             elif [ "$answer" != "${answer#[Nn]}" ]; then
@@ -176,12 +176,12 @@ sync()
             fi
         done
     elif [ $1 = push ]; then
-        rsync -anv --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:documents/UNSW/
+        rsync -anv --exclude env --delete ~/unsw $OTHER_NODE:unsw
         echo -n "\nDo you wish to push to these changes (y/n)? "
         while true; do
             read answer
             if [ "$answer" != "${answer#[Yy]}" ]; then
-                rsync -av --exclude env --delete ~/documents/UNSW/ $OTHER_NODE:documents/UNSW/
+                rsync -av --exclude env --delete ~/unsw $OTHER_NODE:unsw
                 echo "\nDone!"
                 break
             elif [ "$answer" != "${answer#[Nn]}" ]; then
