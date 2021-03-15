@@ -5,4 +5,4 @@ powerline-fonts ruby rsync snapd spotifyd spotify-tui texmaker ttf-iosevka
 ttf-dejavu vlc yay zsh-autosuggestions zsh-syntax-highlighting binutils ntp
 xscreensaver todoist lynx newsboat onedrive-git sshfs pasystray urlscan
 youtube-viewer task-spooler abook urlview teams thunderbird mpv youtube-dl xdo
-openssh
+openssh tensorflow python-tensorflow cuda cudnn
