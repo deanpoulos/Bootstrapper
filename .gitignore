@@ -14,3 +14,8 @@
 .config/polybar/panels/config.ini
 
 .oh-my-zsh/cache
+
+.config/joplin-desktop/resources
+.config/joplin-desktop/tmp
+.config/joplin-desktop/database.sqlite
+.config/joplin-desktop/log.txt
