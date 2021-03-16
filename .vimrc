@@ -61,3 +61,9 @@ set shiftwidth=4
 set autoindent
 set textwidth=80
 set relativenumber
+
+" copy-pasting to clipboard
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+

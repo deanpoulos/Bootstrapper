@@ -154,3 +154,15 @@ alt + {1-3}
 # focus or send to the given desktop
 ctrl + {_, alt + }{1-6}
     bspc {desktop -f , node -d} '^{1-6}' 
+
+# Toggle mute
+XF86AudioMute
+    pulseaudio-ctl mute
+
+# Toggle mic mute
+XF86AudioMicMute
+    pulseaudio-ctl mute-input
+
+# Change volume
+XF86Audio{Raise,Lower}Volume
+    pulseaudio-ctl {up,down} 2
