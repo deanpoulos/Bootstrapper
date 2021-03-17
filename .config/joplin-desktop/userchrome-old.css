@@ -1,38 +1,18 @@
-/* html-ized markdown for entire app */
-/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
-/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
-
+/* For styling the Joplin app (except the HTML-ized markdown, which is defined in `userstyle.css`) */
+/* designed by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
 :root {
-    --white: #fbf1c7;
-    --dark-white: #ebdbb2;
-    --light-grey: #928374;
-    --grey: #504945;
-    --dark-grey: #3c3836;
-    --darker-grey: #32302f;
-    --black: #181a1b;
-    --red: #fb4934;
-    --red-dark: #cc241d;
-    --green: #b8bb26;
-    --green-dark: #6ebb26;
-    --yellow:#fabd2f;
-    --yellow-dark: #d79921;
-    --yellow-darkest: #c47f00;
-    --blue: #83a598;
-    --blue-dark: #458588;
-    --purple: #d3869b;
-    --purple-dark: #b16286;
-    --aqua: #8ec07c;
-    --aqua-dark: #689d6a;
-    --aqua-very-dark: #477248;
-    --orange: #fe8019;
-    --orange-dark: #d65d0e;
-
+    --white: #e3e3e3;
+    --dark-white: #EEF0EA;
+    --light-grey: #A3A79F;
+    --grey: #575856;
+    --dark-grey: #272728;
+    --darker-grey: #1D2024;
+    --black: #171717;
     --base-size-1: 1px;
-    --base-size-4: 5px;
-    --base-size-8: 9px;
-    --base-size-10: 11px;
-    --base-size-14: 14px;
-    --base-size-16: 16px;
+    --base-size-4: 4px;
+    --base-size-8: 8px;
+    --base-size-10: 10px;
+    --base-size-13: 13px;
     --base-size-18: 18px;
     --base-size-24: 24px;
     --base-size-32: 32px;
@@ -44,8 +24,8 @@
     --font-weight-bold: 500;
     --font-sans: "Noto Sans";
     --font-mono: "Iosevka Extended";
-    --primary: var(--purple);
-    --secondary: var(--orange-dark);
+    --primary: #0097DB;
+    --secondary: #00dbcc;
     --font-line-height: 1.4em;
     --font-size: var(--base-size-16);
     --icon-size: var(--font-size);
@@ -54,7 +34,6 @@
 * {
     font-family: var(--font-sans) !important;
     font-weight: var(--font-weight-base) !important;
-    font-size: var(--font-size) !important;
     line-height: var(--font-line-height) !important;
 }
 
@@ -65,8 +44,7 @@
 }
 
 body {
-    background-color: var(--black) !important;
-    font-size: var(--base-size-16) !important;
+    background-color: var(--darker-grey) !important;
 }
 
 .noteTextViewer {
@@ -74,8 +52,8 @@ body {
 }
 
 #react-root>div>div>div:last-child {
+    background-color: var(--darker-grey);
     border-left: none !important;
-    background-color: var(--black)
 }
 
 #react-root>div>div>div:last-child>div>div {
@@ -96,6 +74,11 @@ body {
     border-bottom: none !important;
 }
 
+.editor-toolbar span:last-of-type {
+    width: 100% !important;
+    /* makes the last set of options in the toolbar aligned-right */
+}
+
 #react-root>div>div>div:last-child>div>div>div>div:last-child>div:last-child {
     border: none !important;
 }
@@ -112,53 +95,27 @@ body {
 .ace_editor div, .ace_editor span {
     font-family: var(--font-mono) !important;
     font-weight: --font-weight-base;
-    color: var(--dark-white);
+    color: var(--light-grey);
 }
 
 .ace_heading {
-    /*color: var(--white) !important;*/
-    color: var(--yellow) !important;
-}
-
-/*Bold*/
-.ace_string.ace_strong {
-    color: var(--green-dark) !important;
-    font-weight: bold !important;
-}
-
-/* Italics */
-.ace_string.ace_emphasis {
-	color: var(--green-dark) !important;
-	font-style: italic !important;
-}
-
-/* Line Breaks */
-.ace_constant.ace_language.ace_escape {
-	color: gold !important;
+    color: var(--white) !important;
 }
 
 .ace_variable {
     color: var(--white) !important;
 }
 
-/* Lists and Checkboxes */
 .ace_list {
-    /*color: var(--light-grey) !important;*/
-    color: palegoldenrod !important;
-}
-
-/* Inline Codes and Codeblocks */
-.ace_support.ace_function {
-	color: var(--aqua) !important;
+    color: var(--light-grey) !important;
 }
 
 .ace_string {
     color: var(--primary) !important;
-    
 }
 
 .ace_cursor {
-    border-left: var(--base-size-1) solid var(--orange) !important;
+    border-left: var(--base-size-1) solid var(--primary) !important;
 }
 
 /* prevent cursor from blinking */
@@ -169,14 +126,14 @@ body {
 
 /* gui */
 .side-bar {
-    background-color: var(--black) !important;
+    background-color: var(--darker-grey) !important;
     opacity: 0.8;
 }
 
 .side-bar .folders {}
 
 .side-bar .folders .list-item, .side-bar div, .side-bar span {
-    color: var(--dark-white) !important;
+    color: var(--white) !important;
     font-weight: var(--font-weight-base) !important;
     font-size: var(--font-size) !important;
     margin-bottom: var(--base-size-1);
@@ -193,14 +150,14 @@ body {
 
 .list-item div {
     margin-left: auto !important;
-    padding-right: var(--base-size-14) !important;
+    padding-right: var(--base-size-13) !important;
     opacity: 0.3 !important;
 }
 
 .synchronize-button {}
 
 .note-list {
-    background-color: var(--black);
+    background-color: var(--darker-grey);
     padding: var(--base-size-8) 0;
     opacity: 0.7;
 }
@@ -220,7 +177,7 @@ body {
 .note-list a.list-item span, .tags .list-item {
     /* font-family: "IBM Plex Mono" !important; */
     /* font-size: 12px !important; */
-    color: var(--dark-white) !important;
+    color: var(--light-grey) !important;
 }
 
 .tag-list {
@@ -229,9 +186,8 @@ body {
 
 /* icons */
 .fa, .far, .fas {
-    color: var(--light-grey) !important;
+    color: var(--grey) !important;
     padding-right: var(--base-size-4);
-    padding-left: var(--base-size-4)
 }
 
 #react-root>div {
@@ -247,18 +203,15 @@ body {
     font-size: var(--font-size) !important;
     font-family: var(--font-mono);
     font-weight: var(--font-weight-light);
-    background-color: var(--black) !important
+    background-color: var(--darker-grey) !important
 }
 
+.editor-toolbar {
+    order: 2
+}
 
 .editor-toolbar .button {
     height: var(--base-size-40)
-}
-
-.editor-toolbar .button:not(.disabled):hover, .header .button:not(.disabled):hover{
-    color: var(--white) !important;
-    background-color: var(--yellow-darkest) !important;
-    border: 1px solid var(--yellow-darkest) !important;
 }
 
 .editor-toolbar .button, .header .button {
@@ -270,7 +223,7 @@ body {
 }
 
 .editor-toolbar .fa, .editor-toolbar .fas {
-    padding-right: 4;
+    padding-right: 0;
 }
 
 .header {
@@ -278,21 +231,79 @@ body {
 }
 
 .header .title {
-    color: var(--darker-white);
+    color: var(--grey);
+}
+
+/* toggle sidebar */
+.header>*:nth-child(1) {
+    order: 1
+}
+
+/* toggle notebooks */
+.header>*:nth-child(2) {
+    order: 2
+}
+
+/* new note */
+.header>*:nth-child(3) {
+    order: 5
+}
+
+/* new todo */
+.header>*:nth-child(4) {
+    order: 6
+}
+
+/* new notebook */
+.header>*:nth-child(5) {
+    order: 4;
+    margin-left: var(--base-size-24);
+}
+
+/* layout */
+.header>*:nth-child(6) {
+    order: 6;
+    background-color: transparent !important;
+    padding: 1px 6px !important;
+    margin-left: var(--base-size-24);
+}
+
+/* layout */
+.header>*:nth-child(7) {
+    order: 7
+}
+
+/* search */
+.header>*:nth-child(8) {
+    margin-left: auto;
+    order: 8
+}
+
+.header>*:nth-child(7) input, .header>*:nth-child(8) input {
+    margin-right: var(--base-size-4) !important;
+    margin-left: auto !important;
+    width: var(--base-size-272);
+}
+
+.header>*:nth-child(7) a, .header>*:nth-child(8) a {
+    display: none
 }
 
 input {
     border-radius: var(--base-size-4) !important;
     border: 0px !important;
     background-color: var(--dark-grey) !important;
-    border: var(--base-size-1) solid var(--grey) !important;
-    opacity: 0.7;
-    /*outline: none;*/
+    border: var(--base-size-1) solid var(--darker-grey) !important;
+    opacity: 0.8;
 }
 
 input:focus {
     outline: none;
-    border: var(--base-size-1) solid var(--orange-dark) !important;
+    border: var(--base-size-1) solid var(--primary) !important;
+}
+
+.header *:nth-child(7) a {
+    display: none;
 }
 
 .header .title {
@@ -308,8 +319,7 @@ input:focus {
 }
 
 .note-list .list-item-container:hover, .folders .list-item-container:hover {
-    /* background-color: var(--darker-white) !important; */
-    background-color: var(--yellow-darkest) !important;
+    background-color: var(--grey) !important;
 }
 
 .folders a.list-item {
@@ -333,7 +343,7 @@ input:focus {
     border: none !important;
     background: var(--dark-grey);
     border-radius: var(--base-size-4) !important;
-    padding: var(--base-size-14) !important;
+    padding: var(--base-size-13) !important;
     color: var(--light-grey) !important;
     text-transform: uppercase;
     font-family: var(--font-mono) !important;
@@ -341,71 +351,20 @@ input:focus {
     letter-spacing: 1px;
 }
 
-/* TESTING BELOW */
 /* code mirror */
-
-.cm {
-    font-family: var(--font-sans);
-    font-size: var(--font-size);
-}
-
-/* background and base color */
 .cm-s-material-darker.CodeMirror {
-    background-color: var(--black) !important;
+    background-color: var(--darker-grey) !important;
     color: var(--light-grey) !important
 }
 
-/* lists */
 .cm-s-material-darker .cm-variable-2 {
     color: var(--light-grey) !important
 }
 
-/* internal links */
 .cm-s-material-darker .cm-string {
     color: var(--primary) !important
 }
 
-/* headers */
 .cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4 {
     color: var(--dark-white) !important
-}
-
-.cm-variable-2, .cm-meta {
-    color: var(--red-dark) !important;
-   /* changes the font colour for all lists (.cm-meta controls the checkbox square brackets [ ] ) */
-}
-.cm-comment {
-    color: var(--green-dark) !important;
-   /* changes the font colour for code text*/
-}
-.cm-quote {
-    color: var(--purple-dark) !important;
-   /* changes the font colour for quoted text*/
-}
-.cm-image-marker {
-    color: var(--red);
-   /* changes the font colour for the "!" before displayed image links */
-    font-weight: 900;
-   /* changes the font weight for the "!" before displayed image links */
-}
-.cm-link, .cm-url {
-/* .cm-link is everything in the square brackets | .cm-url is the url itself in the round brackets */
-    color: var(--green) !important;
-   /* changes the font colour for links */
-    text-decoration: none !important;
-   /* removes underlining for links */
-}
-.cm-tag, .cm-attribute {
-/* HTML - .cm-tag is the HTML tag itself such as "<img>" | .cm-attribute is any HTML tag attributes such as "width" or "src" */
-/* the below are NOT applied if the html text is marked as "code" unless it is in a fenced html code block (```HTML) */
-    color: var(--dark-purple) !important;
-   /* changes the font colour for HTML tags */
-    font-weight: 500;
-   /* changes the font weight for HTML tags */
-}
-.cm-hr {
-    color: var(--orange-dark) !important;
-   /* changes the font colour for horizontal rule markdown "***" */
-    font-weight: 900;
-   /* changes the font weight for horizontal rule markdown "***" */
 }

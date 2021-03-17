@@ -7,7 +7,7 @@
     --grey: #575856;
     --dark-grey: #272728;
     --darker-grey: #1D2024;
-    --black: #131517;
+    --black: #171717;
     --base-size-1: 1px;
     --base-size-4: 4px;
     --base-size-8: 8px;
@@ -43,7 +43,7 @@
 
 body {
     font-family: var(--font-sans) !important;
-    font-weight: var(--font-weight-base) !important;
+    font-weight: var(--font-weight-bold) !important;
     color: var(--dark-white);
     background-color: var(--black);
     font-size: var(--font-size) !important;
@@ -54,10 +54,28 @@ p, h1, h2, h3, h4, h5, h6, ul, table {
     margin-bottom: var(--base-size-8);
 }
 
+b, strong {
+    color: #D7402E;
+}
+
 h1, h2, h3, h4 {
-    font-weight: var(--font-weight-light) !important;
+    font-weight: var(--font-weight-base) !important;
     letter-spacing: 0.01em;
     margin-top: var(--base-size-24);
+}
+
+img {
+    filter: invert(91%);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    filter: invert(91%);
+    display: block;
+    margin-right: auto;
+    margin-left: 0;
 }
 
 h1 {
@@ -95,11 +113,7 @@ p, li {
 
 ol li, ul li {
     margin-bottom: var(--base-size-4);
-}
-
-ul ul {
-    /* list-style-type: cjk-heavenly-stem; */
-    list-style-type: disc;
+    vertical-align: middle;
 }
 
 hr {
