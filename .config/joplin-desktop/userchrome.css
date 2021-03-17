@@ -52,7 +52,7 @@ body {
 }
 
 #react-root>div>div>div:last-child {
-    background-color: var(--black);
+    background-color: var(--darker-grey);
     border-left: none !important;
 }
 
@@ -353,7 +353,7 @@ input:focus {
 
 /* code mirror */
 .cm-s-material-darker.CodeMirror {
-    background-color: var(--black) !important;
+    background-color: var(--darker-grey) !important;
     color: var(--light-grey) !important
 }
 
