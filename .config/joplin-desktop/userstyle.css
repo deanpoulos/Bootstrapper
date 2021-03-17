@@ -9,6 +9,7 @@
     --grey: #504945;
     --dark-grey: #3c3836;
     --darker-grey: #32302f;
+    --greyscale-bg: #171717;
     --black: #181a1b;
     --red: #fb4934;
     --red-dark: #cc241d;
@@ -68,7 +69,7 @@ body {
     font-family: var(--font-sans) !important;
     font-weight: var(--font-weight-base) !important;
     color: var(--dark-white);
-    background-color: var(--black);
+    background-color: var(--greyscale-bg);
     font-size: var(--font-size);
 }
 
