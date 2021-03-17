@@ -50,4 +50,5 @@ bspc rule -a feh state=floating
 bspc rule -a Nitrogen state=floating
 bspc rule -a Lightdm-gtk-greeter-settings state=floating
 bspc rule -a Blueman-manager state=floating
-
+bspc rule -a Zathura state=pseudo_tiled
+bspc rule -a Texmaker state=pseudo_tiled
