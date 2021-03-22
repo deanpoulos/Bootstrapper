@@ -19,3 +19,5 @@
 .config/joplin-desktop/tmp
 .config/joplin-desktop/database.sqlite
 .config/joplin-desktop/log.txt
+
+.config/youtube-viewer/api.json

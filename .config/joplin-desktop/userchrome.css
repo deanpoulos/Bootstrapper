@@ -48,7 +48,7 @@
     --secondary: var(--orange-dark);
     --font-line-height: 1.4em;
     --font-size: var(--base-size-16);
-    --icon-size: var(--font-size);
+    --icon-size: var(--base-size-12);
 }
 
 * {
