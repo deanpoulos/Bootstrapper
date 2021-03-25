@@ -1,9 +1,1 @@
-base-devel kitty vim neomutt feh brave bspwm sxhkd picom polybar aurman zsh
-bash-completion python python-pip nitrogen atop calc code dmenu rofi gimp gpick
-grub-theme-manjaro grub-theme-vimix htop mpd neofetch net-tools npm noto-fonts
-powerline-fonts ruby rsync snapd spotifyd spotify-tui texmaker ttf-iosevka
-ttf-dejavu vlc yay zsh-autosuggestions zsh-syntax-highlighting binutils ntp
-xscreensaver todoist lynx newsboat onedrive-git sshfs pasystray urlscan
-youtube-viewer task-spooler abook urlview teams thunderbird mpv youtube-dl xdo
-openssh tensorflow python-tensorflow cuda cudnn tensorboard texlive-science
-zathura zathura-pdf-mupdf minted joplin-desktop
+base-devel kitty vim neomutt feh bspwm sxhkd picom polybar aurman zsh bash-completion python python-pip nitrogen atop calc code dmenu rofi gimp gpick grub-theme-manjaro grub-theme-vimix htop mpd neofetch net-tools npm noto-fonts powerline-fonts ruby rsync snapd spotifyd spotify-tui texmaker ttf-iosevka ttf-dejavu vlc yay zsh-autosuggestions zsh-syntax-highlighting binutils ntp xscreensaver todoist lynx newsboat onedrive-git sshfs pasystray urlscan youtube-viewer task-spooler abook urlview teams thunderbird mpv youtube-dl xdo openssh tensorflow python-tensorflow cuda cudnn tensorboard texlive-science zathura zathura-pdf-mupdf minted joplin-desktop brave-bin
