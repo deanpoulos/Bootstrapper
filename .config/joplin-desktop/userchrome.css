@@ -112,6 +112,11 @@ body {
 .ace_editor div, .ace_editor span {
     font-family: var(--font-mono) !important;
     font-weight: --font-weight-base;
+    color: var(--light-grey);
+}
+
+.ace_heading {
+    color: var(--white) !important;
     color: var(--dark-white);
 }
 
@@ -154,7 +159,6 @@ body {
 
 .ace_string {
     color: var(--primary) !important;
-    
 }
 
 .ace_cursor {

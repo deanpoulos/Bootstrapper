@@ -75,6 +75,7 @@ body {
 
 p, h1, h2, h3, h4, h5, h6, ul, table {
     margin-top: 0;
+    font-weight: var(--font-weight-base) !important;
 }
 
 h1, h2, h3, h4 {
@@ -174,7 +175,6 @@ blockquote {
 .md-checkbox input[type=checkbox]:checked {
     opacity: 0.3 !important;
     text-decoration: line-through;
-    ;
 }
 
 a, summary {
