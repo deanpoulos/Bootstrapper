@@ -3,7 +3,6 @@
 # Autostart
 pgrep -x sxhkd > /dev/null || sxhkd &  # start x-hotkey daemon
 nitrogen --restore
-~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
 xsetroot -cursor_name left_ptr
 picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.config/bspwm/subscriber &
@@ -52,3 +51,6 @@ bspc rule -a Lightdm-gtk-greeter-settings state=floating
 bspc rule -a Blueman-manager state=floating
 bspc rule -a Zathura state=pseudo_tiled
 bspc rule -a Texmaker state=pseudo_tiled
+
+# setup bar
+~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )

@@ -42,7 +42,7 @@ alt + b
 
 # open joplin
 alt + j
-    joplin
+    joplin-desktop
 
 # show help
 alt + slash
@@ -58,6 +58,10 @@ alt + Return
 # take screenshot
 super + shift + s
     xfce4-screenshooter -c -r
+
+# take screenshot
+super + shift + i
+    xfce4-screenshooter -r -s /tmp/screenshot.png && box-invert /tmp/screenshot.png
 
 # rofi window switcher
 #Super_L + Tab
