@@ -64,8 +64,8 @@ super + shift + i
     xfce4-screenshooter -r -s /tmp/screenshot.png && box-invert /tmp/screenshot.png
 
 # rofi window switcher
-#Super_L + Tab
-#	rofi -no-config -no-lazy-grab -show window -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
+super + Tab
+	rofi -no-config -no-lazy-grab -show window -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
 
 # xprop
 alt + x
