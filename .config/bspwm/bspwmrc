@@ -27,6 +27,7 @@ bspc config focus_follows_pointer true
 
 # application-specific rules
 bspc rule -a *:kitty state=pseudo_tiled rectangle=840x540+0+0
+bspc rule -a openrgb state=floating follow=on
 bspc rule -a Xfce4-settings-manager state=floating follow=on
 bspc rule -a Thunar state=floating follow=on
 bspc rule -a Spotify state=floating hidden==on
