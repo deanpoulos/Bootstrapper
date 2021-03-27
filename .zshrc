@@ -109,6 +109,7 @@ cf ()
             fi
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         elif [ $1 = gestures ]; then vim ~/configs/.config/libinput-gestures.conf
+        elif [ $1 = rgb ]; then sudo vim ~/.config/corsair-lighting.service
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -129,6 +130,7 @@ fresh ()
         elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
         elif [ $1 = fetch ]; then neofetch
         elif [ $1 = gestures ]; then libinput-gestures-setup stop && libinput-gestures-setup start
+        elif [ $1 = rgb ]; then systemctl restart corsair-lighting
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
         fi
     else
