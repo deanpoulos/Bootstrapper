@@ -174,7 +174,7 @@ sync()
                 echo "No changes committed."
                 break
             else
-                echo "Please answer yes or no."
+                echo -n "Please answer yes or no. (y/n) "
             fi
         done
     elif [ $1 = push ]; then
@@ -190,7 +190,7 @@ sync()
                 echo "No changes pushed."
                 break
             else
-                echo "Please answer yes or no."
+                echo -n "Please answer yes or no. (y/n) "
             fi
         done
     else
