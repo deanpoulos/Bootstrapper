@@ -108,6 +108,7 @@ cf ()
             else; echo "Syntax error: cf notes [md | app]"
             fi
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
+        elif [ $1 = gestures ]; then vim ~/configs/.config/libinput-gestures.conf
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -127,6 +128,7 @@ fresh ()
         elif [ $1 = zsh ]; then zsh
         elif [ $1 = bar ]; then ~/.config/polybar/launch.sh --panels
         elif [ $1 = fetch ]; then neofetch
+        elif [ $1 = gestures ]; then libinput-gestures-setup stop && libinput-gestures-setup start
         else echo "Syntax error: No refresh sequence configured for argument '$1'."
         fi
     else
