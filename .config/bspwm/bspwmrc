@@ -54,4 +54,6 @@ bspc rule -a Zathura state=pseudo_tiled
 bspc rule -a Texmaker state=pseudo_tiled
 
 # setup bar
+sleep 2
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
+
