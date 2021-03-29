@@ -112,6 +112,8 @@ cf ()
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         elif [ $1 = gestures ]; then vim ~/configs/.config/libinput-gestures.conf
         elif [ $1 = rgb ]; then sudo vim ~/.config/corsair-lighting.service
+        elif [ $1 = -u ]; then cd ~/configs; git pull; cd -
+        elif [ $1 = homesync ]; then sudo vim /usr/local/bin/homesync
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
     else 
@@ -162,6 +164,7 @@ vlab()
     sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/vlab
 }
 
+<<<<<<< HEAD
 homesync()
 {
     OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
@@ -202,6 +205,8 @@ homesync()
     fi
 }
 
+=======
+>>>>>>> 4fcc032d56dd93943a3892cf00de12b2023a1764
 DISABLE_UPDATE_PROMPT="true"
 
 # Print "motd"
