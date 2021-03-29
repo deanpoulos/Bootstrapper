@@ -44,6 +44,8 @@ alias pacman='sudo pacman'
 alias svim='sudo -E vim'
 alias prolog='swipl'
 alias xprop='xprop | grep CLASS'
+alias gs='git status'
+alias openrgb='sudo openrgb'
 
 #
 # # ex - archive extractor
@@ -160,7 +162,7 @@ vlab()
     sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/vlab
 }
 
-sync()
+homesync()
 {
     OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
     if [ $1 = pull ]; then
