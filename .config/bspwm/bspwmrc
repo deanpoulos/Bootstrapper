@@ -27,31 +27,32 @@ bspc config focus_follows_pointer true
 
 # application-specific rules
 bspc rule -a *:kitty state=pseudo_tiled rectangle=840x540+0+0
-bspc rule -a openrgb state=floating follow=on
-bspc rule -a Xfce4-settings-manager state=floating follow=on
-bspc rule -a Thunar state=floating follow=on
-bspc rule -a Spotify state=floating hidden==on
-bspc rule -a spotify state=floating hidden==on
-bspc rule -a Xscreensaver-demo state=floating
-bspc rule -a Gpick state=floating
-bspc rule -a Nm-connection-editor state=floating
-bspc rule -a Xfce4-session-settings state=floating
-bspc rule -a Xfce4-power-manager-settings state=floating
-bspc rule -a Pavucontrol state=floating
-bspc rule -a Pamac-manager state=floating
-#bspc rule -a Eog state=floating
-bspc rule -a Xfce4-mime-settings state=floating
-bspc rule -a Gwyddion state=floating
+bspc rule -a openrgb state=floating follow=on center=true
+bspc rule -a Xfce4-settings-manager state=floating follow=on center=true
+bspc rule -a Thunar state=floating follow=on center=true
+bspc rule -a Spotify state=floating hidden==on center=true
+bspc rule -a spotify state=floating hidden==on center=true
+bspc rule -a Xscreensaver-demo state=floating center=true
+bspc rule -a Gpick state=floating center=true
+bspc rule -a Nm-connection-editor state=floating center=true
+bspc rule -a Xfce4-session-settings state=floating center=true
+bspc rule -a Xfce4-power-manager-settings state=floating center=true
+bspc rule -a Pavucontrol state=floating center=true
+bspc rule -a Pamac-manager state=floating center=true
+#bspc rule -a Eog state=floating center=true
+bspc rule -a Xfce4-mime-settings state=floating center=true
+bspc rule -a Gwyddion state=floating center=true
 bspc rule -a 'Photoshop.exe' state=psuedo_tiled
-bspc rule -a Pamac-manager state=floating
-bspc rule -a manjaro-settings-manager state=floating
-bspc rule -a matplotlib state=floating
-bspc rule -a feh state=floating
-bspc rule -a Nitrogen state=floating
-bspc rule -a Lightdm-gtk-greeter-settings state=floating
-bspc rule -a Blueman-manager state=floating
+bspc rule -a Pamac-manager state=floating center=true
+bspc rule -a manjaro-settings-manager state=floating center=true
+bspc rule -a matplotlib state=floating center=true
+bspc rule -a feh state=floating center=true
+bspc rule -a Nitrogen state=floating center=true
+bspc rule -a Lightdm-gtk-greeter-settings state=floating center=true
+bspc rule -a Blueman-manager state=floating center=true
 bspc rule -a Zathura state=pseudo_tiled
 bspc rule -a Texmaker state=pseudo_tiled
+bspc rule -a System-config-printer.py state=floating center=true
 
 # setup bar
 sleep 2
