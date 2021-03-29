@@ -164,49 +164,6 @@ vlab()
     sshfs -o allow_other,reconnect z5122508@cse.unsw.edu.au:/import/kamen/2/z5122508 /home/dean/vlab
 }
 
-<<<<<<< HEAD
-homesync()
-{
-    OTHER_NODE=$(nmap -p 22 -oG - 192.168.0.0/24 | grep open | grep -v $(ip -4 addr | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | grep -v 127) | awk '{print $2}')
-    if [ $1 = pull ]; then
-        rsync -anv --exclude env --delete $OTHER_NODE:~/unsw ~/
-        echo -n "\nDo you wish to commit to these changes (y/n)? "
-        while true; do
-            read answer
-            if [ "$answer" != "${answer#[Yy]}" ]; then
-                rsync -av --exclude env --delete $OTHER_NODE:~/unsw ~/
-                echo "\nDone!"
-                break
-            elif [ "$answer" != "${answer#[Nn]}" ]; then
-                echo "No changes committed."
-                break
-            else
-                echo -n "Please answer yes or no. (y/n) "
-            fi
-        done
-    elif [ $1 = push ]; then
-        rsync -anv --exclude env --delete ~/unsw $OTHER_NODE:~/
-        echo -n "\nDo you wish to push to these changes (y/n)? "
-        while true; do
-            read answer
-            if [ "$answer" != "${answer#[Yy]}" ]; then
-                rsync -av --exclude env --delete ~/unsw $OTHER_NODE:~/
-                echo "\nDone!"
-                break
-            elif [ "$answer" != "${answer#[Nn]}" ]; then
-                echo "No changes pushed."
-                break
-            else
-                echo -n "Please answer yes or no. (y/n) "
-            fi
-        done
-    else
-        echo "Usage: sync [pull|push]"
-    fi
-}
-
-=======
->>>>>>> 4fcc032d56dd93943a3892cf00de12b2023a1764
 DISABLE_UPDATE_PROMPT="true"
 
 # Print "motd"
