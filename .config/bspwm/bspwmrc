@@ -56,5 +56,5 @@ bspc rule -a System-config-printer.py state=floating center=true
 bspc rule -a Nvidia-settings state=floating center=true
 
 # setup bar
-sleep 2
+sleep 4
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
