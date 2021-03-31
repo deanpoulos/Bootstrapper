@@ -113,7 +113,15 @@ cf ()
         elif [ $1 = gestures ]; then vim ~/configs/.config/libinput-gestures.conf
         elif [ $1 = rgb ]; then sudo vim ~/.config/corsair-lighting.service
         elif [ $1 = -u ]; then cd ~/configs; git pull; cd -
-        elif [ $1 = -p ]; then cd ~/configs; git commit -am "Automatic push."; git push; cd -
+        elif [ $1 = -p ]; then 
+            cd ~/configs; 
+            if [ $2 ]; then
+                git commit -am "$2"; 
+            else
+                git commit -am "Automatic push."; 
+            fi
+            git push
+            cd -
         elif [ $1 = homesync ]; then sudo vim /usr/local/bin/homesync
         else echo "Syntax error: No dotfile configured for argument '$1'."
         fi
