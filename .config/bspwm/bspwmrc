@@ -51,10 +51,10 @@ bspc rule -a Nitrogen state=floating center=true
 bspc rule -a Lightdm-gtk-greeter-settings state=floating center=true
 bspc rule -a Blueman-manager state=floating center=true
 bspc rule -a Zathura state=pseudo_tiled
-bspc rule -a Texmaker state=pseudo_tiled
 bspc rule -a System-config-printer.py state=floating center=true
+bspc rule -a System-config-printer.py state=floating center=true
+bspc rule -a Nvidia-settings state=floating center=true
 
 # setup bar
 sleep 2
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
-
