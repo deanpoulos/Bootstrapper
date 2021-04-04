@@ -54,7 +54,10 @@ bspc rule -a Zathura state=pseudo_tiled
 bspc rule -a System-config-printer.py state=floating center=true
 bspc rule -a System-config-printer.py state=floating center=true
 bspc rule -a Nvidia-settings state=floating center=true
+bspc rule -a jetbrains-studio state=pseudo_tiled center=true
 
 # setup bar
 sleep 4
+~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
+sleep 2
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
