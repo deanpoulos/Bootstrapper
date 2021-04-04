@@ -70,6 +70,20 @@ super + shift + i
 super + Tab
 	rofi -no-config -no-lazy-grab -show window -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
 
+# Make a tabbed instance
+super + t; space
+    tabbed
+
+# Add focused window to a tabbed instance in given direction
+super + t; {h,j,k,l}
+    tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
+
+# Remove one tab from tabbed
+super + t; r
+    tabbed=$(bspc query -N -n focused); \
+    child=$(tabc.sh $tabbed list | head -n1); \
+    tabc.sh $tabbed remove $child
+
 # xprop
 alt + x
     kitty -e 'xprop | grep CLASS && input'

@@ -190,3 +190,9 @@ ZSH_HIGHLIGHT_STYLES[globbing]='none'
 
 LS_COLORS=$LS_COLORS:'ln=0;95:' ; export LS_COLORS
 LS_COLORS=$LS_COLORS:'di=0;96:' ; export LS_COLORS
+
+export ANDROID_HOME=$HOME/.android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
