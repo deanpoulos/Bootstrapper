@@ -55,6 +55,7 @@ bspc rule -a System-config-printer.py state=floating center=true
 bspc rule -a System-config-printer.py state=floating center=true
 bspc rule -a Nvidia-settings state=floating center=true
 bspc rule -a jetbrains-studio state=pseudo_tiled center=true
+bspc rule -a tabbed state=tiled center=true
 
 # setup bar
 sleep 4
