@@ -85,8 +85,8 @@ super + t; r
     tabc.sh $tabbed remove $child
 
 # xprop
-alt + x
-    kitty -e 'xprop | grep CLASS && input'
+#alt + x
+#    kitty -e 'xprop | grep CLASS && input'
 
 # whisker menu
 #{Super_L,Super_R}
