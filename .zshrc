@@ -182,6 +182,7 @@ get_updates()
     CHANGES=$( git diff origin/master | wc -l )
     cd ~
     if [ $CHANGES > 1 ]; then
+        echo $CHANGES
         echo -e "Note: There are changes between local and remote configs.\n"
     fi
 }
