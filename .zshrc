@@ -182,7 +182,7 @@ get_updates()
     CHANGES=$( git diff origin/master | wc -l )
     cd ~
     if [ $( python -c "print(1 if $CHANGES > 0 else 0)")=0 ]; then
-        echo $( python -c "print(1 if $CHANGES > 0 else 0)") 
+        # do nothing
     else
         echo -e "Note: There are changes between local and remote configs.\n"
     fi
