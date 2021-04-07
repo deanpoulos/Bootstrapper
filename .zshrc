@@ -176,9 +176,20 @@ vlab()
 
 DISABLE_UPDATE_PROMPT="true"
 
+get_updates() 
+{
+    cd ~/configs
+    CHANGES=$( git diff origin/master | wc -l )
+    cd ~
+    if [ $CHANGES > 1 ]; then
+        echo -e "Note: There are changes between local and remote configs.\n"
+    fi
+}
+
 # Print "motd"
 
 clear
+get_updates
 cat ~/.fetch_output
 
 # To differentiate aliases from other command types
