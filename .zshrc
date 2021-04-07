@@ -46,7 +46,7 @@ alias prolog='swipl'
 alias xprop='xprop | grep CLASS'
 alias gs='git status'
 alias openrgb='sudo openrgb'
-alias work='remmina ~/.local/share/remmina/group_rdp_cqc2t-workstation_129-94-116-53.remmina'
+alias work='remmina ~/.local/share/remmina/group_rdp_cqc2t-workstation_129-94-116-53.remmina && exit'
 
 #
 # # ex - archive extractor
