@@ -47,7 +47,7 @@ xfce4-settings-manager      # remove keyboard shorcuts
 # edit lightdm-greeter-settings
 
 # link sxhkd-help binary
-cd /usr/local/bin && sudo ln -s ~/configs/bin/sxhkd-help
+cd /usr/local/bin && sudo ln -s ~/configs/bin/*
 
 # synchronise time with network time
 sudo ntpd -qg
