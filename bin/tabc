@@ -55,9 +55,14 @@ case $cmd in
 		wid=$2
         tabbedid=$(bspc query -N -n focused)
 		xdotool windowreparent $wid $(get_root_wid)
+        if [ $( tabc list $tabbedid | wc -l) = '0' ]; then
+            if [[ $(xprop -id $tabbedid | grep tabbed | wc -l ) != '0' ]]; then 
+                xdotool windowkill $tabbedid
+            fi
+        fi
 		;;
 	list)
 		tabbedid=$2
-		get_clients $tabbed
+		get_clients $tabbedid
 		;;
 esac

@@ -79,7 +79,7 @@ super + t; {h,j,k,l}
 super + t; r
     tabbed=$(bspc query -N -n focused); \
     child=$(tabc list $tabbed | head -n1); \
-    tabc remove $child
+    tabc remove $child; \
 
 # xprop
 #alt + x
