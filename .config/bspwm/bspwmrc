@@ -11,7 +11,7 @@ picom --experimental-backends --backend glx --xrender-sync-fence &
 source ~/.config/bspwm/monitors
 
 # visual configuration
-bspc config border_width 5
+bspc config border_width 0
 bspc config focused_border_color \#D7402E
 bspc config active_border_color \#484848
 bspc config window_gap 30
