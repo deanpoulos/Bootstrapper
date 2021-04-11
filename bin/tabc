@@ -49,7 +49,9 @@ fi
 case $cmd in
 	add)
 		wid=$3
-		xdotool windowreparent $wid $tabbedid
+        if [[ $(xprop -id $tabbedid | grep tabbed | wc -l ) != '0' ]]; then 
+            xdotool windowreparent $wid $tabbedid
+        fi
 		;;
 	remove)
 		wid=$2
