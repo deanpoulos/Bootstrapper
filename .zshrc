@@ -47,6 +47,7 @@ alias class='xprop | grep CLASS'
 alias gs='git status'
 alias openrgb='sudo openrgb'
 alias work='remmina ~/.local/share/remmina/group_rdp_cqc2t-workstation_129-94-116-53.remmina && exit'
+alias weka='~/src/weka-3-8-5/weka.sh & disown && exit'
 
 #
 # # ex - archive extractor
