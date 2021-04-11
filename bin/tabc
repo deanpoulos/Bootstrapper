@@ -56,6 +56,7 @@ case $cmd in
 	remove)
 		wid=$2
         tabbedid=$(bspc query -N -n focused)
+        notify-send hi
         if [[ $(xprop -id $tabbedid | grep tabbed | wc -l ) != '0' ]]; then 
             xdotool windowreparent $wid $(get_root_wid)
         fi
