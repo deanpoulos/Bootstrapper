@@ -62,3 +62,4 @@ bspc rule -a org.remmina.Remmina state=fullscreen
 # setup bar
 sleep 4
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
+~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
