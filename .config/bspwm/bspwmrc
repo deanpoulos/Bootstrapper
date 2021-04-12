@@ -63,4 +63,5 @@ bspc rule -a weka-gui-GUIChooser state=floating
 # setup bar
 sleep 4
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
+sleep 1
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
