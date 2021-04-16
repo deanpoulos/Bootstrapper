@@ -13,8 +13,8 @@ alt + shift + space
     bspc rule -a kitty state=floating rectangle=840x540+0+0 center=true; kitty &; sleep 0.4; bspc rule -a kitty state=pseudo_tiled rectangle=840x540+0+0
 
 # todo list
-alt + t
-    todoist
+#alt + t
+#    todoist
 
 # open file manager
 alt + f
