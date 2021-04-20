@@ -159,8 +159,8 @@ F6
 # === focus/swap ===
 
 # focus the next/previous node
-alt + {Up,Down}
-	bspc node -f {prev,next}.local.!above
+alt + {Up,Down,Left,Right}
+	bspc node -f $( bspc query -N -n {north, south, west, east} )
 
 # focus the next/previous desktop
 alt + {Left,Right}
