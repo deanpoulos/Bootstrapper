@@ -181,7 +181,7 @@ get_updates()
 {
     cd ~/configs
     CHANGES=$( git diff origin/master | wc -l )
-    cd ~
+    cd - >> /dev/null
     if [ $( python -c "print(1 if $CHANGES > 0 else 0)") = 0 ]; then
         # do nothing
     else
