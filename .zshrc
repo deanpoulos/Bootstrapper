@@ -48,12 +48,9 @@ alias gs='git status'
 alias openrgb='sudo openrgb'
 alias work='remmina ~/.local/share/remmina/group_rdp_cqc2t-workstation_129-94-116-53.remmina && exit'
 alias weka='~/src/weka-3-8-5/weka.sh & disown; exit'
-<<<<<<< HEAD
-=======
 alias ai='cd ~/unsw/21t1/COMP3411'
 alias ml='cd ~/unsw/21t1/COMP9417'
 alias cv='cd ~/unsw/21t1/COMP9517'
->>>>>>> dccc064909f357f2f4fd2501ffeaef594ebc2412
 
 #
 # # ex - archive extractor
