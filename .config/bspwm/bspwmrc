@@ -60,6 +60,7 @@ bspc rule -a Peek state=floating center=true
 bspc rule -a org.remmina.Remmina state=fullscreen
 bspc rule -a weka-gui-GUIChooser state=floating
 bspc rule -a Matplotlib state=floating
+bspc rule -a 'VirtualBox Manager' state=pseudo_tiled
 
 # setup bar
 sleep 4
