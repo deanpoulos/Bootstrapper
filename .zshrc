@@ -117,6 +117,7 @@ cf ()
         elif [ $1 = rss ]; then vim ~/.config/newsboat/config
         elif [ $1 = gestures ]; then vim ~/configs/.config/libinput-gestures.conf
         elif [ $1 = rgb ]; then sudo vim ~/.config/corsair-lighting.service
+        elif [ $1 = pdf ]; then sudo vim ~/configs/.config/zathura/zathurarc
         elif [ $1 = -u ]; then cd ~/configs; git pull; cd -
         elif [ $1 = -p ]; then 
             cd ~/configs; 
