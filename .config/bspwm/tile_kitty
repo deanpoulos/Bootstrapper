@@ -23,14 +23,14 @@ for desktop in listify(bash('bspc query -D --names')):
     # get a list of tiled or pseudo tiled windows in desktop
     windows = []
     for state in ['tiled', 'pseudo_tiled']:
-        windows.extend(listify(bash(f"bspc query -N -d {desktop} -n "
-            f".window.!hidden.{state}")))
+        windows.extend(listify(bash(
+            f"bspc query -N -d {desktop} -n .window.!hidden.{state}")))
 
     #print(f"desktop {desktop} windows {windows}.")
 
 
     # if there are more than two windows on this desktop
-    if len(windows) >= 2:
+    if len(windows) > 1:
         # tile terminal
         for kitty in intersection(kitties, windows):
             bash(f"bspc node {kitty} -t tiled")
@@ -38,4 +38,7 @@ for desktop in listify(bash('bspc query -D --names')):
         # pseudo-tile terminal
         for kitty in intersection(kitties, windows):
             bash(f"bspc node {kitty} -t pseudo_tiled")
+        for window in windows:
+            if window not in kitties:
+                bash(f"bspc node {window} -t fullscreen")
 
