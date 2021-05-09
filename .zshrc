@@ -163,12 +163,13 @@ font()
         if [ $2 ]; then
             cp $2 /home/dean/.local/share/fonts/
         else
-            echo "Usage: font -i <font-name.*tf>"
+            echo "Usage: font -i <font-name.*ttf>"
         fi
     elif [ $1 = "-u" ]; then
         fc-cache -f -v
     else
-        echo "Usage: font -i <font-name.*tf>"
+        echo "Usage: font -i <font-name.*ttf>"
+        echo "   or, font -u"
     fi
 }
 
