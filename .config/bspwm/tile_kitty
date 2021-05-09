@@ -38,7 +38,8 @@ for desktop in listify(bash('bspc query -D --names')):
         # pseudo-tile terminal
         for kitty in intersection(kitties, windows):
             bash(f"bspc node {kitty} -t pseudo_tiled")
-        for window in windows:
-            if window not in kitties:
-                bash(f"bspc node {window} -t fullscreen")
+        ## This will make single-window desktops fullscreen
+        #for window in windows:
+        #    if window not in kitties:
+        #        bash(f"bspc node {window} -t fullscreen")
 
