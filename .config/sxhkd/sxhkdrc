@@ -28,14 +28,11 @@ alt + e
 alt + s
     xfce4-settings-manager
 
-# unhide window
-alt + u
-    bspc node $(bspc query -N -n .hidden.local.window) --flag hidden=off
-
 # hide focused window
 alt + h
     bspc node --flag hidden=on
 
+# unhide window
 alt + u
     bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off
 
