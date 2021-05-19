@@ -157,6 +157,15 @@ fresh ()
     fi
 }
 
+sync()
+{
+    if [ $1 = "time" ]; then
+        sudo ntpd
+    else
+        echo "Usage: time sync"
+    fi
+}
+
 font()
 {
     if [ $1 = "-i" ]; then

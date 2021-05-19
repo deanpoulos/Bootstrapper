@@ -63,6 +63,7 @@ bspc rule -a Matplotlib state=floating
 bspc rule -a 'VirtualBox Manager' state=floating
 bspc rule -a 'Manjaro Settings Manager' state=floating
 bspc rule -a 'VirtualBox Machine' state=fullscreen
+bspc rule -a 'VirtualBoxVM' state=fullscreen
 
 # setup bar
 sleep 4
