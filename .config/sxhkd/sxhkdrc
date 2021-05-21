@@ -36,11 +36,11 @@ alt + h
 alt + u
     bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off
 
-# open brave
+# open browser
 alt + b
-    brave
+    firefox
 
-# open joplin
+# open notes
 alt + j
     joplin-desktop
 
