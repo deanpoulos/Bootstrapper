@@ -66,6 +66,7 @@ bspc rule -a 'Manjaro Settings Manager' state=floating
 bspc rule -a 'VirtualBox Machine' state=fullscreen
 bspc rule -a 'VirtualBoxVM' state=floating
 bspc rule -a 'jetbrains-pycharm-ce' state=floating
+bspc rule -a yad-calendar state=floating
 
 # setup bar
 sleep 4

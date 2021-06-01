@@ -63,3 +63,7 @@ xfce4-settings-mangaer  # Mouse & Touchpad > Theme
 
 # install brave extensions
 brave   # gruvbox theme, google dark-theme, video speed controller
+
+# install polybar-scripts
+cd ~/src
+git clone https://github.com/polybar/polybar-scripts.git
