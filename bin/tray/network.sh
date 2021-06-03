@@ -13,7 +13,7 @@ network_print() {
 
             if [ "$state" = "activated" ]; then
                 if [ "$type" = "802-11-wireless" ]; then
-                    icon=" "
+                    icon=""
 
                     signal=$(nmcli -t -f in-use,signal device wifi list ifname "$device" | grep "\*" | cut -d ':' -f 2)
                     if [ "$signal" -lt 40 ]; then

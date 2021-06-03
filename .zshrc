@@ -119,6 +119,7 @@ cf ()
         elif [ $1 = rgb ]; then sudo vim ~/.config/corsair-lighting.service
         elif [ $1 = pdf ]; then sudo vim ~/configs/.config/zathura/zathurarc
         elif [ $1 = -u ]; then cd ~/configs; git pull; cd -
+        elif [ $1 = -s ]; then cd ~/configs; git status; cd -
         elif [ $1 = -p ]; then 
             cd ~/configs; 
             if [ $2 ]; then

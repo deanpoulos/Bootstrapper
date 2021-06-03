@@ -69,7 +69,5 @@ bspc rule -a 'jetbrains-pycharm-ce' state=floating
 bspc rule -a yad-calendar state=floating
 
 # setup bar
-sleep 4
-~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
-sleep 1
+sleep 3
 ~/.config/polybar/launch.sh --$( cat ~/.config/polybar/theme )
