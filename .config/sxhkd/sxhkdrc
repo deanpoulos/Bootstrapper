@@ -55,6 +55,10 @@ alt + e
 alt + Return
     rofi -no-config -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/blocks/scripts/rofi/launcher.rasi
 
+# activities
+super
+    ~/.config/polybar/panels/scripts/launcher.sh --gnome
+
 # take screenshot
 super + shift + s
     xfce4-screenshooter -c -r
