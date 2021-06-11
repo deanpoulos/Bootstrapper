@@ -58,7 +58,7 @@ bspc rule -a Nvidia-settings state=floating center=true
 bspc rule -a jetbrains-studio state=pseudo_tiled center=true
 bspc rule -a tabbed state=tiled center=true
 bspc rule -a Peek state=floating center=true
-bspc rule -a org.remmina.Remmina state=fullscreen
+#bspc rule -a org.remmina.Remmina state=fullscreen
 bspc rule -a weka-gui-GUIChooser state=floating
 bspc rule -a Matplotlib state=floating
 bspc rule -a 'VirtualBox Manager' state=floating
