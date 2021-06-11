@@ -1,11 +1,11 @@
 #! /bin/sh
 
 # Autostart
-pgrep -x sxhkd > /dev/null || sxhkd &  # start x-hotkey daemon
 nitrogen --restore
 xsetroot -cursor_name left_ptr
 picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.config/bspwm/subscriber &
+sxhkd &  # start x-hotkey daemon
 
 # monitor configuration
 source ~/.config/bspwm/monitors
