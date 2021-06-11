@@ -23,3 +23,5 @@
 .config/youtube-viewer/api.json
 
 .fzf
+
+.config/joplin-desktop/settings.json
