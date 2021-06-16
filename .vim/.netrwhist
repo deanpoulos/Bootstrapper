@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/dean/unsw/21t2/COMP3900/cheep/.git'
 let g:netrw_dirhist_8='/home/dean/unsw/unsw/21t1/COMP9517/labs/lab02/.ipynb_checkpoints'
 let g:netrw_dirhist_7='/home/dean/projects/git-hook-docs/repo/.git/hooks'
 let g:netrw_dirhist_6='/home/dean/configs'
