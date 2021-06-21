@@ -1,0 +1,33 @@
+{
+    "editor.fontFamily": "'Iosevka Extended', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.minimap.enabled": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "json.maxItemsComputed": 100000,
+    "workbench.colorCustomizations": {
+
+        "[Gruvbox Dark Medium]": {
+            "terminal.background":"#262626",
+            "terminal.foreground":"#E9DAB1",
+            "terminalCursor.background":"#A89984",
+            "terminalCursor.foreground":"#A89984",
+            "terminal.ansiBlack":"#E9DAB1",
+            "terminal.ansiBlue":"#458588",
+            "terminal.ansiBrightBlack":"#928374",
+            "terminal.ansiBrightBlue":"#83A598",
+            "terminal.ansiBrightCyan":"#8EC07C",
+            "terminal.ansiBrightGreen":"#B8BB26",
+            "terminal.ansiBrightMagenta":"#8F4673",
+            "terminal.ansiBrightRed":"#FB4934",
+            "terminal.ansiBrightWhite":"#928374",
+            "terminal.ansiBrightYellow":"#FABD2D",
+            "terminal.ansiCyan":"#689D6A",
+            "terminal.ansiGreen":"#98971A",
+            "terminal.ansiMagenta":"#B16286",
+            "terminal.ansiRed":"#CC241D",
+            "terminal.ansiWhite":"#A89984",
+            "terminal.ansiYellow":"#D79921"
+        }
+    }
+}
