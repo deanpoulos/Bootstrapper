@@ -17,26 +17,17 @@ setopt prompt_subst
 autoload -U add-zsh-hook
 autoload -Uz vcs_info
 
-#use extended color palette if available
-if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
-    aqua="%F{81}"
-    orange="%F{166}"
-    purple="%F{135}"
-    red="%F{161}"
-    limegreen="%F{118}"
-else
-    grey="%F{244}"
-    aqua="%F{15}"
-    darkaqua="%F{6}"
-    orange="%F{208}"
-    purple="%F{12}"
-    blue="%F{13}"
-    red="%F{9}"
-    limegreen="%F{2}"
-    yellow="%F{11}"
-    darkpink="%F{5}"
-    pink="%F{14}"
-fi
+grey="%F{244}"
+aqua="%F{15}"
+darkaqua="%F{6}"
+orange="%F{208}"
+purple="%F{12}"
+blue="%F{13}"
+red="%F{9}"
+limegreen="%F{2}"
+yellow="%F{11}"
+darkpink="%F{5}"
+pink="%F{14}"
 
 # enable VCS systems you use
 zstyle ':vcs_info:*' enable git svn
