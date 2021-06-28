@@ -1,11 +1,11 @@
 #! /bin/sh
 
 # Autostart
+sxhkd &  # start x-hotkey daemon
 nitrogen --restore
 xsetroot -cursor_name left_ptr
 picom --experimental-backends --backend glx --xrender-sync-fence &
 ~/.config/bspwm/subscriber &
-sxhkd &  # start x-hotkey daemon
 
 # monitor configuration
 source ~/.config/bspwm/monitors
@@ -14,7 +14,7 @@ source ~/.config/bspwm/monitors
 bspc config border_width 0
 bspc config focused_border_color \#D7402E
 bspc config active_border_color \#484848
-bspc config window_gap 30
+bspc config window_gap 0
 bspc config split_ratio 0.50
 bspc config pointer_motion_interval 7
 
@@ -67,6 +67,7 @@ bspc rule -a 'VirtualBox Machine' state=fullscreen
 bspc rule -a 'VirtualBoxVM' state=floating
 bspc rule -a 'jetbrains-pycharm-ce' state=floating
 bspc rule -a yad-calendar state=floating
+#bspc rule -a '*:TabPlots Navigator' state=floating
 
 # setup bar
 sleep 10

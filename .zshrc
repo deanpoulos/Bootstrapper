@@ -47,7 +47,9 @@ alias class='xprop | grep CLASS'
 alias gs='git status'
 alias openrgb='sudo openrgb'
 alias work='remmina ~/.local/share/remmina/group_rdp_cqc2t-workstation_129-94-116-53.remmina && exit'
-alias cheep='cd ~/unsw/21t2/COMP3900/cheep'
+alias cheep='cd ~/unsw/21t2/COMP3900/cheep/client'
+alias jlab='cd ~/src/cqc2t-jlab && source ./venv/bin/activate'
+alias jfab='cd ~/src/cqc2t-jfab'
 
 #
 # # ex - archive extractor
