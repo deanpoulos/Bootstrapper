@@ -51,6 +51,19 @@ alias cheep='cd ~/unsw/21t2/COMP3900/cheep/client'
 alias jlab='cd ~/src/cqc2t-jlab && source ./venv/bin/activate'
 alias jfab='cd ~/src/cqc2t-jfab'
 
+gaps () {
+    sed -i 's/window_gap 0/window_gap 30/g' ~/.config/bspwm/bspwmrc 
+    sed -i '4s/shadow = false/shadow = true/g' ~/.config/picom/picom.conf
+    fresh wm
+}
+
+nogaps () {
+    sed -i 's/window_gap 30/window_gap 0/g' ~/.config/bspwm/bspwmrc 
+    sed -i '4s/shadow = true/shadow = false/g' ~/.config/picom/picom.conf
+    fresh wm
+}
+
+
 #
 # # ex - archive extractor
 # # usage: ex <file>
